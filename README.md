@@ -1,0 +1,1 @@
+Babaco is a place where store owners can upload about their store stocks and customers can find the right store to buy products.
