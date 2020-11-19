@@ -31,14 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'store.apps.StoreConfig',    #our store app has been linked!
-    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'store.apps.StoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +77,10 @@ WSGI_APPLICATION = 'babaco.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Babaco',
-        'USER' : 'postgres',
-        'PASSWORD' : 'minchuv',
-        'HOST' : 'localhost'
+        'NAME': 'babaco',
+        'USER': 'babaco_app',
+        'PASSWORD': 'avocado',
+        'HOST': 'localhost'
     }
 }
 
