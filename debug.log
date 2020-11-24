@@ -1,0 +1,40 @@
+DEBUG:root:9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0
+DEBUG:root:9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0
+INFO:django.utils.autoreload:D:\Web app\babaco.new\authenticator\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /auth/register
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco.new\authenticator\views.py", line 46, in customer_registration_view
+    return RegistrationView.registration_view(req, usr='cust')
+  File "D:\Web app\babaco.new\authenticator\views.py", line 25, in registration_view
+    form.data['password'] = passwd
+  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+INFO:django.utils.autoreload:D:\Web app\babaco.new\authenticator\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /auth/register
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco.new\authenticator\views.py", line 47, in customer_registration_view
+    return RegistrationView.registration_view(req, usr='cust')
+  File "D:\Web app\babaco.new\authenticator\views.py", line 26, in registration_view
+    form.data['password'] = passwd
+  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+INFO:django.utils.autoreload:D:\Web app\babaco.new\authenticator\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /register/
+WARNING:django.request:Not Found: /register/store

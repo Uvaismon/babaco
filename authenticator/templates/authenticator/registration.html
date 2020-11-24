@@ -1,0 +1,41 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authenticator/register.css' %}">
+    {% if usr == 'store' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'authenticator/register_store.css' %}">
+    {% endif %}
+{% endblock styleLinks %}
+
+{% block bodyContent %}
+
+
+    <div class="card form-card">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4" style="font-size: x-large; font-weight: bold;"> Register now</legend>
+                {% if messages %}
+                    {% for message in messages %}
+                    <span contenteditable="true" class="alert-danger"> {{ message }} </span><br>
+                    {% endfor %}
+                {% endif %}
+                <div class="spread">
+                    {% for field in form %}
+                        <div class="elm">
+                        <br> {{ field.label_tag }} {% if field.field.required %} * {% endif %} <br>
+                        <span class="ml-2"> {{ field }}</span><br>
+                        </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+            <div class="text-muted ahc">
+                Already have an account? <a href="#">Sign in</a>
+            </div>
+            <div class="form-group sgnbtn">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock bodyContent %}

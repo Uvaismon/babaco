@@ -5,15 +5,15 @@ class Store(models.Model):
     store_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50, null=False)
     location = models.TextField(null=False)
-    contact = models.IntegerField()
-    email = models.EmailField(null=False)
+    contact = models.BigIntegerField(blank=True, null=True)
+    email = models.EmailField(null=False, unique=True)
     password = models.CharField(max_length=256, null=False)
 
 
 class Customer(models.Model):
     cust_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=32, null=False)
-    email = models.EmailField(null=False)
+    email = models.EmailField(null=False, unique=True)
     password = models.CharField(max_length=256, null=False)
 
 
