@@ -24,6 +24,34 @@ class RegistrationForm(ModelForm):
         if re.search(r'[^a-zA-Z .]', self.cleaned_data['name']):
             self.add_error('name', 'Invalid name')
 
+class LoginForm(ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        #self.fields['name'].widget.attrs.update(size='30')
+        self.fields['email'].widget.attrs.update(size='30')
+        self.fields['password'].widget.attrs.update(size='30')
+        #self.fields['password1'].widget.attrs.update(size='30')
+
+    #password1 = CharField(widget=PasswordInput(), label='Confirm password')
+
+    def loginverify(self, usr):
+        self.is_valid()
+        mail = self.cleaned_data['email']
+        password = self.cleaned_data['password']
+        if usr == 'store':
+            z = Store
+        else:
+            z = Customer
+        if z.objects.filter(email=mail):
+            x = z.objects.get(email=mail)
+            if x.password == password:
+                pass
+            else:
+                self.add_error('password', 'Wrong Password')
+        else:
+            self.add_error('email','Email not registered')
+
 
 class CustomerRegistrationForm(RegistrationForm):
     class Meta:
@@ -48,3 +76,21 @@ class StoreRegistrationForm(RegistrationForm):
         super().__init__(*args, **kwargs)
         self.fields['location'].widget.attrs.update(size='30')
         self.fields['contact'].widget.attrs.update(size='30')
+
+
+class StoreLoginForm(LoginForm):
+    class Meta:
+        model = Store
+        fields = ['email','password']
+        widgets = {
+            'password': PasswordInput()
+        }
+
+
+class CustomerLoginForm(LoginForm):
+    class Meta:
+        model = Customer
+        fields = ['email','password']
+        widgets = {
+            'password': PasswordInput()
+        }
