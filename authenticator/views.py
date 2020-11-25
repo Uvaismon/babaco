@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import CustomerRegistrationForm, StoreRegistrationForm, CustomerLoginForm, StoreLoginForm
+from .forms import CustomerRegistrationForm, StoreRegistrationForm, LoginForm
 from django.contrib import messages
+from store.models import Store,Customer
 from hashlib import sha256
 import logging
 logging.basicConfig(level='DEBUG', filename='debug.log')
@@ -54,18 +55,33 @@ class LoginView:
 
     @staticmethod
     def login_view(req, usr):
-        if usr == 'cust':
+        login_form = LoginForm
+        '''if usr == 'cust':
             user = 'cust'
-            login_form = CustomerLoginForm
         elif usr == 'store':
             user = 'store'
-            login_form = StoreLoginForm
         else:
-            raise Exception("usr Error: User mode not specified")
+            raise Exception("usr Error: User mode not specified")'''
 
         if req.method == 'POST':
             form = login_form(req.POST)
-            form.loginverify(user)
+
+            if form.is_valid():
+                email = form.cleaned_data['email']
+                password = form.cleaned_data['password']
+                if usr == 'store':
+                    z = Store
+                else:
+                    z = Customer
+                if z.objects.filter(email=email):
+                    x = z.objects.get(email=email)
+                    if x.password == password:
+                        pass
+                    else:
+                        form.add_error('password', 'Wrong Password')
+                else:
+                    form.add_error('email', 'Email not registered')
+
             if form.is_valid():
                 return redirect('home')
             else:

@@ -632,3 +632,51 @@ Traceback (most recent call last):
 KeyError: 'email'
 INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /auth/login
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
+    return LoginView.login_view(req, usr='cust')
+  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
+    form.loginverify(user)
+AttributeError: 'loginForm' object has no attribute 'loginverify'
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /auth/login
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 101, in customer_login_view
+    return LoginView.login_view(req, usr='cust')
+  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 69, in login_view
+    mail = form.cleaned_data['email']
+AttributeError: 'loginForm' object has no attribute 'cleaned_data'
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /auth/login
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
+    return LoginView.login_view(req, usr='cust')
+  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
+    form.loginverify(user)
+AttributeError: 'LoginForm' object has no attribute 'loginverify'
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor

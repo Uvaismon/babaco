@@ -1,5 +1,6 @@
 from django.forms import ModelForm, PasswordInput, CharField, Textarea, TextInput, NumberInput
 from store.models import Customer, Store
+from django import forms
 import re
 import logging
 
@@ -24,7 +25,7 @@ class RegistrationForm(ModelForm):
         if re.search(r'[^a-zA-Z .]', self.cleaned_data['name']):
             self.add_error('name', 'Invalid name')
 
-class LoginForm(ModelForm):
+class LoginForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -34,7 +35,7 @@ class LoginForm(ModelForm):
         #self.fields['password1'].widget.attrs.update(size='30')
 
     #password1 = CharField(widget=PasswordInput(), label='Confirm password')
-
+'''
     def loginverify(self, usr):
         self.is_valid()
         mail = self.cleaned_data['email']
@@ -51,7 +52,7 @@ class LoginForm(ModelForm):
                 self.add_error('password', 'Wrong Password')
         else:
             self.add_error('email','Email not registered')
-
+'''
 
 class CustomerRegistrationForm(RegistrationForm):
     class Meta:
@@ -77,20 +78,8 @@ class StoreRegistrationForm(RegistrationForm):
         self.fields['location'].widget.attrs.update(size='30')
         self.fields['contact'].widget.attrs.update(size='30')
 
-
-class StoreLoginForm(LoginForm):
-    class Meta:
-        model = Store
-        fields = ['email','password']
-        widgets = {
-            'password': PasswordInput()
-        }
+class LoginForm(forms.Form):
+    email = forms.EmailField()
+    password = forms.CharField(widget=PasswordInput(),max_length=30)
 
 
-class CustomerLoginForm(LoginForm):
-    class Meta:
-        model = Customer
-        fields = ['email','password']
-        widgets = {
-            'password': PasswordInput()
-        }
