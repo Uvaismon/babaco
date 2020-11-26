@@ -1,0 +1,68 @@
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import LoginForm
+
+
+def registration_view(req, user, reg_form, ret):
+    """General function to handle registration view."""
+
+    # Checking if its a POST request and handle it.
+    if req.method == 'POST':
+        form = reg_form(req.POST)
+        form.verify()
+        if form.is_valid():
+            # form._mutable = True
+            # passwd = sha256(form.cleaned_data['password'].encode()).hexdigest()
+            # form.data['password'] = passwd
+            # logging.debug(passwd)
+            # logging.debug(form.cleaned_data['password'])
+
+            form.save()
+            return redirect(ret)
+        else:
+            # Checking for errors in the form.
+            if form.has_error('email'):
+                messages.error(req, 'User with the given email already exists.')
+            elif form.has_error('password'):
+                messages.error(req, 'Password confirmation failed')
+            elif form.has_error('name'):
+                messages.error(req, 'Invalid name')
+            elif form.has_error('contact'):
+                messages.error(req, 'Invalid contact number.')
+    else:
+        form = reg_form()
+    context = {'form': form, 'title': 'register', 'user': user, 'user_name': req.session.get('user_name')}
+    return render(req, 'shop/registration.html', context)
+
+
+def login_view(req, user, database, ret):
+    # General function to handle login views.
+
+    if req.method == 'POST':
+        form = LoginForm(req.POST)
+
+        if form.is_valid():
+            # Retrieving form data.
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            # Checking against database data.
+            if database.objects.filter(email=email):
+                x = database.objects.get(email=email)
+                if x.password != password:
+                    form.add_error('password', 'Wrong Password')
+            else:
+                form.add_error('email', 'Email not registered')
+
+        if form.is_valid():
+            req.session['user_id'] = database.objects.get(email=email).user_id
+            req.session['user_name'] = database.objects.get(email=email).name
+            return redirect(ret)
+        else:
+            if form.has_error('email'):
+                messages.error(req, 'The given email is not registered!')
+            elif form.has_error('password'):
+                messages.error(req, 'Incorrect Password')
+    else:
+        form = LoginForm()
+    context = {'form': form, 'title': 'login', 'user': user, 'user_name': req.session.get('user_name')}
+    return render(req, 'shop/login.html', context)

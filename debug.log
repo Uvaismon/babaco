@@ -1,682 +1,306 @@
-DEBUG:root:9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0
-DEBUG:root:9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0
-INFO:django.utils.autoreload:D:\Web app\babaco.new\authenticator\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/register
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco.new\authenticator\views.py", line 46, in customer_registration_view
-    return RegistrationView.registration_view(req, usr='cust')
-  File "D:\Web app\babaco.new\authenticator\views.py", line 25, in registration_view
-    form.data['password'] = passwd
-  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 491, in __setitem__
-    self._assert_mutable()
-  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
-    raise AttributeError("This QueryDict instance is immutable")
-AttributeError: This QueryDict instance is immutable
-INFO:django.utils.autoreload:D:\Web app\babaco.new\authenticator\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/register
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco.new\authenticator\views.py", line 47, in customer_registration_view
-    return RegistrationView.registration_view(req, usr='cust')
-  File "D:\Web app\babaco.new\authenticator\views.py", line 26, in registration_view
-    form.data['password'] = passwd
-  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 491, in __setitem__
-    self._assert_mutable()
-  File "D:\Web app\django\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
-    raise AttributeError("This QueryDict instance is immutable")
-AttributeError: This QueryDict instance is immutable
-INFO:django.utils.autoreload:D:\Web app\babaco.new\authenticator\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 WARNING:django.request:Not Found: /register/
-WARNING:django.request:Not Found: /register/store
-ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-WARNING:django.request:Bad Request: /
-ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-WARNING:django.request:Bad Request: /favicon.ico
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\babaco\settings.py changed, reloading.
+WARNING:django.request:Not Found: /register/
+WARNING:django.request:Not Found: /register/
+INFO:django.utils.autoreload:D:\Web app\babaco\babaco\urls.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-WARNING:django.request:Not Found: /favicon.ico
-WARNING:django.request:Not Found: /auth/register/login
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /
+INFO:django.utils.autoreload:D:\Web app\babaco\babaco\urls.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /register/
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /login/
-WARNING:django.request:Not Found: /login/
-WARNING:django.request:Not Found: /login/
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-ERROR:django.request:Internal Server Error: /auth/login
+ERROR:django.request:Internal Server Error: /register/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail=self.cleaned_data['email']
-AttributeError: 'CustomerLoginForm' object has no attribute 'cleaned_data'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 44, in loginverify
-    x=Customer.objects.get(email=email)
-NameError: name 'email' is not defined
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 42, in loginverify
-    x = Customer.objects.get(email=email)
-NameError: name 'email' is not defined
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-psycopg2.errors.NotNullViolation: null value in column "contact" of relation "store_store" violates not-null constraint
-DETAIL:  Failing row contains (1, , , null, tester@gmail.com, Testing123).
-
+  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: store/base.html
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 69, in login_view
-    form.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 460, in save
-    self.instance.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 753, in save
-    self.save_base(using=using, force_insert=force_insert,
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 790, in save_base
-    updated = self._save_table(
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 895, in _save_table
-    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 933, in _do_insert
-    return manager._insert(
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 1254, in _insert
-    return query.get_compiler(using=using).execute_sql(returning_fields)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 1397, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 98, in execute
-    return super().execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 66, in execute
-    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
-    return executor(sql, params, many, context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\utils.py", line 90, in __exit__
-    raise dj_exc_value.with_traceback(traceback) from exc_value
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-django.db.utils.IntegrityError: null value in column "contact" of relation "store_store" violates not-null constraint
-DETAIL:  Failing row contains (1, , , null, tester@gmail.com, Testing123).
-
-ERROR:django.request:Internal Server Error: /auth/login
+  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
+    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
+  File "D:\Web app\babaco\shop\views.py", line 33, in registration_view
+    return render(req, 'shop/registration.html', {'form': form, 'title': 'register', 'usr': usr})
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: store/base.html
+ERROR:django.request:Internal Server Error: /register/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-psycopg2.errors.NotNullViolation: null value in column "contact" of relation "store_store" violates not-null constraint
-DETAIL:  Failing row contains (2, , , null, tester@gmail.com, Testing123).
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
+    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
+  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
+    return redirect(usr + 'home')
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'userhome' not found. 'userhome' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'user'
 
-
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 69, in login_view
-    form.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 460, in save
-    self.instance.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 753, in save
-    self.save_base(using=using, force_insert=force_insert,
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 790, in save_base
-    updated = self._save_table(
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 895, in _save_table
-    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 933, in _do_insert
-    return manager._insert(
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 1254, in _insert
-    return query.get_compiler(using=using).execute_sql(returning_fields)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 1397, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 98, in execute
-    return super().execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 66, in execute
-    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
-    return executor(sql, params, many, context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\utils.py", line 90, in __exit__
-    raise dj_exc_value.with_traceback(traceback) from exc_value
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-django.db.utils.IntegrityError: null value in column "contact" of relation "store_store" violates not-null constraint
-DETAIL:  Failing row contains (2, , , null, tester@gmail.com, Testing123).
+  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
+    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
+  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
+    return redirect(usr + ':home')
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'user' is not a registered namespace
+INFO:django.utils.autoreload:D:\Web app\babaco\babaco\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'user'
 
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 43, in loginverify
-    y = Customer.objects.get(password=password)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 429, in get
-    raise self.model.DoesNotExist(
-store.models.Customer.DoesNotExist: Customer matching query does not exist.
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
+    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
+  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
+    return redirect(usr + ':home')
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'user' is not a registered namespace
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
+ERROR:django.request:Internal Server Error: /register/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 44, in loginverify
-    if Customer.objects.get(password=password):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 429, in get
-    raise self.model.DoesNotExist(
-store.models.Customer.DoesNotExist: Customer matching query does not exist.
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 44, in loginverify
-    if Customer.objects.get(password=password):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 429, in get
-    raise self.model.DoesNotExist(
-store.models.Customer.DoesNotExist: Customer matching query does not exist.
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
+    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
+  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
+    return redirect(usr + ':home')
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'user' is not a registered namespace
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
+ERROR:django.request:Internal Server Error: /register/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 44, in loginverify
-    if Customer.objects.get(password=password):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 429, in get
-    raise self.model.DoesNotExist(
-store.models.Customer.DoesNotExist: Customer matching query does not exist.
-ERROR:django.request:Internal Server Error: /auth/login
+  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
+    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
+  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
+    return redirect('home')
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\forms.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /login/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 44, in loginverify
-    if Customer.objects.get(password=password):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 429, in get
-    raise self.model.DoesNotExist(
-store.models.Customer.DoesNotExist: Customer matching query does not exist.
+TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
+ERROR:django.request:Internal Server Error: /login/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 50, in loginverify
-    if x.pk == y.pk:
-AttributeError: 'QuerySet' object has no attribute 'pk'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
+ERROR:django.request:Internal Server Error: /login/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 48, in loginverify
-    if x.pk == y.pk:
-AttributeError: 'QuerySet' object has no attribute 'pk'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /auth/
-WARNING:django.request:Not Found: /favicon.ico
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login/store
+ERROR:django.request:Internal Server Error: /login/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 89, in store_login_view
-    return LoginView.login_view(req, usr='store')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail=self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail=self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
+INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login/store
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 89, in store_login_view
-    return LoginView.login_view(req, usr='store')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 WARNING:django.request:Not Found: /favicon.ico
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-WARNING:django.request:Not Found: /login/
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify()
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 84, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 66, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 84, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 66, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 84, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 66, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 84, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 66, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+WARNING:django.request:Not Found: /ogin
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 WARNING:django.request:Not Found: /favicon.ico
-ERROR:django.request:Internal Server Error: /auth/login
+INFO:django.utils.autoreload:D:\Web app\babaco\store\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /signup
+ERROR:django.request:Internal Server Error: /store/login/
 Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 84, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 66, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 47, in loginverify
-    x = z.objects.get(email=mail)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 433, in get
-    raise self.model.MultipleObjectsReturned(
-store.models.Customer.MultipleObjectsReturned: get() returned more than one Customer -- it returned 3!
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+  File "D:\Web app\babaco\store\views.py", line 14, in store_login_view
+    return login_view(req, user='store', database=Store, ret='home.store')
+  File "D:\Web app\babaco\shop\views.py", line 59, in login_view
+    return redirect('ret')
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ret' not found. 'ret' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 84, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 66, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 84, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 66, in login_view
-    form.loginverify(usr)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 47, in loginverify
-    if z.objects.filter(email=mail):
-AttributeError: 'str' object has no attribute 'objects'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 68, in login_view
-    form.loginverify(user)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\forms.py", line 40, in loginverify
-    mail = self.cleaned_data['email']
-KeyError: 'email'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 85, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify(user)
-AttributeError: 'loginForm' object has no attribute 'loginverify'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 101, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 69, in login_view
-    mail = form.cleaned_data['email']
-AttributeError: 'loginForm' object has no attribute 'cleaned_data'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /auth/login
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 86, in customer_login_view
-    return LoginView.login_view(req, usr='cust')
-  File "C:\Users\vignesh\Desktop\babaco\authenticator\views.py", line 67, in login_view
-    form.loginverify(user)
-AttributeError: 'LoginForm' object has no attribute 'loginverify'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\authenticator\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /store/re
