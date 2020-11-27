@@ -6,7 +6,7 @@ from .forms import StoreRegistrationForm
 
 
 def home(req):
-    context = {'title': 'home', 'user': 'store', 'user_name': req.session.get('user_name')}
+    context = {'title': 'home', 'user': 'store', 'store_name': req.session.get('store_name')}
     return render(req, 'store/home.html', context)
 
 

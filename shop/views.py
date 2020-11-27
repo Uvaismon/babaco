@@ -6,6 +6,9 @@ from .forms import LoginForm
 def registration_view(req, user, reg_form, ret):
     """General function to handle registration view."""
 
+    if req.session.get(user + '_id'):
+        return redirect(ret)
+
     # Checking if its a POST request and handle it.
     if req.method == 'POST':
         form = reg_form(req.POST)
@@ -31,13 +34,15 @@ def registration_view(req, user, reg_form, ret):
                 messages.error(req, 'Invalid contact number.')
     else:
         form = reg_form()
-    context = {'form': form, 'title': 'register', 'user': user, 'user_name': req.session.get('user_name')}
+    context = {'form': form, 'title': 'register', 'user': user, user + '_name': req.session.get(user + '_name')}
     return render(req, 'shop/registration.html', context)
 
 
 def login_view(req, user, database, ret):
     # General function to handle login views.
 
+    if req.session.get(user + '_id'):
+        return redirect(ret)
     if req.method == 'POST':
         form = LoginForm(req.POST)
 
@@ -54,8 +59,8 @@ def login_view(req, user, database, ret):
                 form.add_error('email', 'Email not registered')
 
         if form.is_valid():
-            req.session['user_id'] = database.objects.get(email=email).user_id
-            req.session['user_name'] = database.objects.get(email=email).name
+            req.session[user + '_id'] = database.objects.get(email=email).user_id
+            req.session[user + '_name'] = database.objects.get(email=email).name
             return redirect(ret)
         else:
             if form.has_error('email'):
@@ -64,5 +69,10 @@ def login_view(req, user, database, ret):
                 messages.error(req, 'Incorrect Password')
     else:
         form = LoginForm()
-    context = {'form': form, 'title': 'login', 'user': user, 'user_name': req.session.get('user_name')}
+    context = {'form': form, 'title': 'login', 'user': user, user + '_name': req.session.get(user + '_name')}
     return render(req, 'shop/login.html', context)
+
+
+def logout(req):
+    req.session.flush()
+    return redirect('home')

@@ -19,11 +19,15 @@
             <a href="{% url 'home.store' %}" class="navbar-brand">Babaco</a>
         {% endif %}
         <div class="auth">
-           {% if user_name %}
-                {{ user_name }}
-            {% else %}
-                {% if user == 'user' %}
+            {% if user == 'user' %}
+                {% if user_name %}
+                        {{ user_name }}
+                {% else %}
                     <a href="{% url 'login' %}">Log in </a>
+                {% endif %}
+            {% else %}
+                {% if store_name %}
+                        {{ store_name }}
                 {% else %}
                     <a href="{% url 'login.store' %}">Log in </a>
                 {% endif %}
