@@ -1,5 +1,5 @@
 from shop.forms import RegistrationForm
-from shop.models import Store
+from shop.models import Store, Product
 from django.forms import ModelForm, PasswordInput, CharField, Textarea, TextInput, NumberInput
 
 
@@ -19,3 +19,19 @@ class StoreRegistrationForm(RegistrationForm):
         super().__init__(*args, **kwargs)
         self.fields['location'].widget.attrs.update(size='30')
         self.fields['contact'].widget.attrs.update(size='30')
+
+class AddproductForm(ModelForm):
+    class Meta:
+        model = Product
+
+        fields = ['name', 'details', 'price', 'category', 'store_id', 'image']
+        widgets = {
+            'price': NumberInput(),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['name'].widget.attrs.update(size='20')
+        self.fields['details'].widget.attrs.update(size='10')
+        self.fields['price'].widget.attrs.update(size='10')
+        self.fields['store_id'].widget.attrs['readonly'] = True

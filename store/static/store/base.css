@@ -1,0 +1,11 @@
+body {
+    font-family: 'Comic Sans MS';
+    background-color: black;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    color: lightblue;
+    font-size: x-large;
+    font-weight: bolder;
+}
