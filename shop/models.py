@@ -1,6 +1,7 @@
 from django.db import models
 from PIL import Image
 
+
 class Store(models.Model):
     user_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50, null=False)
@@ -19,21 +20,13 @@ class Customer(models.Model):
 
 class Product(models.Model):
     prod_id = models.AutoField(primary_key=True)
-    store_id = models.ForeignKey('Store', on_delete=models.CASCADE)
+    store_id = models.ForeignKey('Store', on_delete=models.CASCADE, blank=True)
     name = models.CharField(max_length=32, null=False)
     details = models.TextField()
     price = models.DecimalField(decimal_places=2, max_digits=7)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    image = models.ImageField(default='default.jpg',upload_to = 'product_pics/')
-    #image =models.FileField(null=True,blank=True)
-    '''def save(self) :
-        super().save()
+    image = models.ImageField(upload_to='product_pics/')
 
-        img = Image.open(self.image.path)
-        if img.height > 500 or img.width >400:
-            output_size = (500, 400)
-            img.thumbnail(output_size)
-            img.save(self.image.path)'''
 
 class Review(models.Model):
     rev_id = models.AutoField(primary_key=True)

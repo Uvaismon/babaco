@@ -1,9 +1,6 @@
 from django.forms import ModelForm, PasswordInput, CharField, Textarea, TextInput, NumberInput
 from django import forms
 import re
-import logging
-
-logging.basicConfig(level='DEBUG', filename='debug.log')
 
 
 class RegistrationForm(ModelForm):

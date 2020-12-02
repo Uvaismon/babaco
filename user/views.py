@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from shop.views import registration_view, login_view
 from .forms import CustomerRegistrationForm
-from shop.models import Customer
+from shop.models import Customer, Product
 from shop.forms import LoginForm
 
 
 def home(req):
-    context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name')}
+    products = Product.objects.all()[:6]
+    context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'products': products}
     return render(req, 'user/home.html', context)
 
 

@@ -14,13 +14,7 @@ def registration_view(req, user, reg_form, ret):
         form = reg_form(req.POST)
         form.verify()
         if form.is_valid():
-            # form._mutable = True
-            # passwd = sha256(form.cleaned_data['password'].encode()).hexdigest()
-            # form.data['password'] = passwd
-            # logging.debug(passwd)
-            # logging.debug(form.cleaned_data['password'])
-
-            form.save()
+            form.save()  # dbtrans
             return redirect(ret)
         else:
             # Checking for errors in the form.
@@ -51,16 +45,16 @@ def login_view(req, user, database, ret):
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
             # Checking against database data.
-            if database.objects.filter(email=email):
-                x = database.objects.get(email=email)
+            if database.objects.filter(email=email):    # dbtrans
+                x = database.objects.get(email=email)  # dbtrans
                 if x.password != password:
                     form.add_error('password', 'Wrong Password')
             else:
                 form.add_error('email', 'Email not registered')
 
         if form.is_valid():
-            req.session[user + '_id'] = database.objects.get(email=email).user_id
-            req.session[user + '_name'] = database.objects.get(email=email).name
+            req.session[user + '_id'] = database.objects.get(email=email).user_id   # dbtrans
+            req.session[user + '_name'] = database.objects.get(email=email).name    # dbtrans
             return redirect(ret)
         else:
             if form.has_error('email'):

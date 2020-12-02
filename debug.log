@@ -1,40 +1,148 @@
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /register/
-WARNING:django.request:Not Found: /register/
-WARNING:django.request:Not Found: /register/
-INFO:django.utils.autoreload:D:\Web app\babaco\babaco\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /
-WARNING:django.request:Not Found: /
-INFO:django.utils.autoreload:D:\Web app\babaco\babaco\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /register/
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /register/
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 70 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 2194
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+DEBUG:root:black.png
+DEBUG:root:Store object (1)
+ERROR:django.request:Internal Server Error: /store/addproduct/
 Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 61, in render
-    return self.template.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 170, in render
-    return self._render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 162, in _render
-    return self.nodelist.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 938, in render
-    bit = node.render_annotated(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 905, in render_annotated
-    return self.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 127, in render
-    compiled_parent = self.get_parent(context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
-    return self.find_template(parent, context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 103, in find_template
-    template, origin = context.template.engine.find_template(
-  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 129, in find_template
-    raise TemplateDoesNotExist(name, tried=tried)
-django.template.exceptions.TemplateDoesNotExist: store/base.html
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 41, in store_addproduct_view
+    form.cleaned_data['store_id'] = Store.objects.get(req.session.get('store_id'))
+  File "D:\Web app\django\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Web app\django\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "D:\Web app\django\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Web app\django\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "D:\Web app\django\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\Web app\django\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Web app\django\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\Web app\django\lib\site-packages\django\db\models\sql\query.py", line 1255, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable int object
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 70 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 2194
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+DEBUG:root:black.png
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
+DETAIL:  Failing row contains (10, aaaa, lkjashcjah, 100.00, null, 1, product_pics/black_wuXea1G.png).
+
 
 The above exception was the direct cause of the following exception:
 
@@ -43,447 +151,1516 @@ Traceback (most recent call last):
     response = get_response(request)
   File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
-    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
-  File "D:\Web app\babaco\shop\views.py", line 33, in registration_view
-    return render(req, 'shop/registration.html', {'form': form, 'title': 'register', 'usr': usr})
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 19, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 62, in render_to_string
-    return template.render(context, request)
-  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 63, in render
-    reraise(exc, self.backend)
-  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 84, in reraise
-    raise new from exc
-django.template.exceptions.TemplateDoesNotExist: store/base.html
-ERROR:django.request:Internal Server Error: /register/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
-    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
-  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
-    return redirect(usr + 'home')
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 87, in reverse
-    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'userhome' not found. 'userhome' is not a valid view function or pattern name.
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /register/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 72, in reverse
-    extra, resolver = resolver.namespace_dict[ns]
-KeyError: 'user'
+  File "D:\Web app\babaco\store\views.py", line 36, in store_addproduct_view
+    form.save()
+  File "D:\Web app\django\lib\site-packages\django\forms\models.py", line 460, in save
+    self.instance.save()
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 790, in save_base
+    updated = self._save_table(
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 933, in _do_insert
+    return manager._insert(
+  File "D:\Web app\django\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Web app\django\lib\site-packages\django\db\models\query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "D:\Web app\django\lib\site-packages\django\db\models\sql\compiler.py", line 1397, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
+DETAIL:  Failing row contains (10, aaaa, lkjashcjah, 100.00, null, 1, product_pics/black_wuXea1G.png).
 
-During handling of the above exception, another exception occurred:
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\models.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 70 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 2194
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 70 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 2194
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 70 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 2194
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
+DETAIL:  Failing row contains (14, bbbb, lkjashcjah, 100.00, null, 1, product_pics/black_pdtI81f.png).
+
+
+The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
   File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
   File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
-    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
-  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
-    return redirect(usr + ':home')
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 83, in reverse
-    raise NoReverseMatch("%s is not a registered namespace" % key)
-django.urls.exceptions.NoReverseMatch: 'user' is not a registered namespace
-INFO:django.utils.autoreload:D:\Web app\babaco\babaco\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /register/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 72, in reverse
-    extra, resolver = resolver.namespace_dict[ns]
-KeyError: 'user'
+  File "D:\Web app\babaco\store\views.py", line 43, in store_addproduct_view
+    form.save()
+  File "D:\Web app\django\lib\site-packages\django\forms\models.py", line 460, in save
+    self.instance.save()
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 790, in save_base
+    updated = self._save_table(
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 933, in _do_insert
+    return manager._insert(
+  File "D:\Web app\django\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Web app\django\lib\site-packages\django\db\models\query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "D:\Web app\django\lib\site-packages\django\db\models\sql\compiler.py", line 1397, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
+DETAIL:  Failing row contains (14, bbbb, lkjashcjah, 100.00, null, 1, product_pics/black_pdtI81f.png).
 
-During handling of the above exception, another exception occurred:
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 70 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 2194
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 42, in store_addproduct_view
+    form[store_id] = store_id
+TypeError: 'AddproductForm' object does not support item assignment
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 70 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 2194
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
+DETAIL:  Failing row contains (15, bbbb, lkjashcjah, 100.00, null, 1, product_pics/black_HrnGx8s.png).
+
+
+The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
   File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
   File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
-    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
-  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
-    return redirect(usr + ':home')
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 83, in reverse
-    raise NoReverseMatch("%s is not a registered namespace" % key)
-django.urls.exceptions.NoReverseMatch: 'user' is not a registered namespace
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /register/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 72, in reverse
-    extra, resolver = resolver.namespace_dict[ns]
-KeyError: 'user'
+  File "D:\Web app\babaco\store\views.py", line 43, in store_addproduct_view
+    form.save()
+  File "D:\Web app\django\lib\site-packages\django\forms\models.py", line 460, in save
+    self.instance.save()
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 790, in save_base
+    updated = self._save_table(
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "D:\Web app\django\lib\site-packages\django\db\models\base.py", line 933, in _do_insert
+    return manager._insert(
+  File "D:\Web app\django\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Web app\django\lib\site-packages\django\db\models\query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "D:\Web app\django\lib\site-packages\django\db\models\sql\compiler.py", line 1397, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
+DETAIL:  Failing row contains (15, bbbb, lkjashcjah, 100.00, null, 1, product_pics/black_HrnGx8s.png).
 
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
-    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
-  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
-    return redirect(usr + ':home')
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 83, in reverse
-    raise NoReverseMatch("%s is not a registered namespace" % key)
-django.urls.exceptions.NoReverseMatch: 'user' is not a registered namespace
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /register/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 13, in customer_registration_view
-    return registration_view(req, usr='user', reg_form=CustomerRegistrationForm)
-  File "D:\Web app\babaco\shop\views.py", line 20, in registration_view
-    return redirect('home')
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 87, in reverse
-    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\forms.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\forms.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\models.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-TypeError: login_view() missing 2 required positional arguments: 'usr' and 'database'
-INFO:django.utils.autoreload:D:\Web app\babaco\user\urls.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\forms.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /store/addproduct/store.login
+WARNING:django.request:Not Found: /store/addproduct/store.login
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 70 65466
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 70 56661
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 54 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 70 65466
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 WARNING:django.request:Not Found: /favicon.ico
-WARNING:django.request:Not Found: /ogin
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:D:\Web app\babaco\store\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /signup
-ERROR:django.request:Internal Server Error: /store/login/
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
 Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\store\views.py", line 14, in store_login_view
-    return login_view(req, user='store', database=Store, ret='home.store')
-  File "D:\Web app\babaco\shop\views.py", line 59, in login_view
-    return redirect('ret')
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 41, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 131, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "D:\Web app\django\lib\site-packages\django\urls\base.py", line 87, in reverse
-    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
-  File "D:\Web app\django\lib\site-packages\django\urls\resolvers.py", line 685, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'ret' not found. 'ret' is not a valid view function or pattern name.
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /store/re
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 20, in customer_login_view
-    return login_view(req, user='user', database=Customer, ret='home')
-  File "D:\Web app\babaco\shop\views.py", line 68, in login_view
-    return render(req, 'user/login.html', context)
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 19, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 61, in render_to_string
-    template = get_template(template_name, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 15, in get_template
-    return engine.get_template(template_name)
-  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 34, in get_template
-    return Template(self.engine.get_template(template_name), self)
-  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 143, in get_template
-    template, origin = self.find_template(template_name)
-  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 125, in find_template
-    template = loader.get_template(name, skip=skip)
-  File "D:\Web app\django\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
-    return Template(
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 155, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
-    return parser.parse()
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 478, in parse
-    raise self.error(token, e)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 476, in parse
-    compiled_result = compile_func(self, token)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 272, in do_extends
-    raise TemplateSyntaxError("'%s' cannot appear more than once in the same template" % bits[0])
-django.template.exceptions.TemplateSyntaxError: 'extends' cannot appear more than once in the same template
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 20, in customer_login_view
-    return login_view(req, user='user', database=Customer, ret='home')
-  File "D:\Web app\babaco\shop\views.py", line 68, in login_view
-    return render(req, 'user/login.html', context)
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 19, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 61, in render_to_string
-    template = get_template(template_name, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 19, in get_template
-    raise TemplateDoesNotExist(template_name, chain=chain)
-django.template.exceptions.TemplateDoesNotExist: user/login.html
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 470, in parse
-    compile_func = self.tags[command]
-KeyError: 'endif'
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "5"
+LINE 1: ... details, price, category, image) values(5, Ryzen 5, CPU, 18...
+                                                             ^
 
-During handling of the above exception, another exception occurred:
+
+The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
   File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
   File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 20, in customer_login_view
-    return login_view(req, user='user', database=Customer, ret='home')
-  File "D:\Web app\babaco\shop\views.py", line 68, in login_view
-    return render(req, 'shop/login.html', context)
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 19, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 61, in render_to_string
-    template = get_template(template_name, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 15, in get_template
-    return engine.get_template(template_name)
-  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 34, in get_template
-    return Template(self.engine.get_template(template_name), self)
-  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 143, in get_template
-    template, origin = self.find_template(template_name)
-  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 125, in find_template
-    template = loader.get_template(name, skip=skip)
-  File "D:\Web app\django\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
-    return Template(
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 155, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
-    return parser.parse()
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 478, in parse
-    raise self.error(token, e)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 476, in parse
-    compiled_result = compile_func(self, token)
-  File "D:\Web app\django\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 478, in parse
-    raise self.error(token, e)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 476, in parse
-    compiled_result = compile_func(self, token)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
-    nodelist = parser.parse()
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 472, in parse
-    self.invalid_block_tag(token, command, parse_until)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 531, in invalid_block_tag
-    raise self.error(
-django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 3: 'endif'. Did you forget to register or load this tag?
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /store/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 470, in parse
-    compile_func = self.tags[command]
-KeyError: 'else'
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute(f"INSERT INTO shop_Product(store_id, name, details, price, category, image)"
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+django.db.utils.ProgrammingError: syntax error at or near "5"
+LINE 1: ... details, price, category, image) values(5, Ryzen 5, CPU, 18...
+                                                             ^
 
-During handling of the above exception, another exception occurred:
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "5"
+LINE 1: ... details, price, category, image) values(5, Ryzen 5, CPU, 18...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
   File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
     response = get_response(request)
   File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\store\views.py", line 10, in home
-    return render(req, 'store/home.html', context,)
-  File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 19, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 62, in render_to_string
-    return template.render(context, request)
-  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 61, in render
-    return self.template.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 170, in render
-    return self._render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 162, in _render
-    return self.nodelist.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 938, in render
-    bit = node.render_annotated(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 905, in render_annotated
-    return self.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 127, in render
-    compiled_parent = self.get_parent(context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
-    return self.find_template(parent, context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 103, in find_template
-    template, origin = context.template.engine.find_template(
-  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 125, in find_template
-    template = loader.get_template(name, skip=skip)
-  File "D:\Web app\django\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
-    return Template(
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 155, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
-    return parser.parse()
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 478, in parse
-    raise self.error(token, e)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 476, in parse
-    compiled_result = compile_func(self, token)
-  File "D:\Web app\django\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 478, in parse
-    raise self.error(token, e)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 476, in parse
-    compiled_result = compile_func(self, token)
-  File "D:\Web app\django\lib\site-packages\django\template\defaulttags.py", line 979, in do_if
-    nodelist = parser.parse(('endif',))
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 472, in parse
-    self.invalid_block_tag(token, command, parse_until)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 522, in invalid_block_tag
-    raise self.error(
-django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 27: 'else', expected 'endif'. Did you forget to register or load this tag?
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute(f"INSERT INTO shop_Product(store_id, name, details, price, category, image)"
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+django.db.utils.ProgrammingError: syntax error at or near "5"
+LINE 1: ... details, price, category, image) values(5, Ryzen 5, CPU, 18...
+                                                             ^
+
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "jpg"
+LINE 1: ... Ryzen5, CPU, 18000, Computers, witcher-3-background-10.jpg)
+                                                                   ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute(f"INSERT INTO shop_Product(store_id, name, details, price, category, image)"
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+django.db.utils.ProgrammingError: syntax error at or near "jpg"
+LINE 1: ... Ryzen5, CPU, 18000, Computers, witcher-3-background-10.jpg)
+                                                                   ^
+
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.SyntaxError: syntax error at or near ")"
+LINE 1: ...kcn', '120', 'Electronics', 'witcher-3-background-10.jpg', )
+                                                                      ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute("INSERT INTO shop_Product(store_id, name, details, price, category, image) "
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: syntax error at or near ")"
+LINE 1: ...kcn', '120', 'Electronics', 'witcher-3-background-10.jpg', )
+                                                                      ^
+
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "store_id" of relation "shop_product" does not exist
+LINE 1: INSERT INTO shop_Product(store_id, name, details, price, cat...
+                                 ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute("INSERT INTO shop_Product(store_id, name, details, price, category, image) "
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "store_id" of relation "shop_product" does not exist
+LINE 1: INSERT INTO shop_Product(store_id, name, details, price, cat...
+                                 ^
+
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "category" of relation "shop_product" does not exist
+LINE 1: ...O shop_Product(store_id_id, name, details, price, category, ...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute("INSERT INTO shop_Product(store_id_id, name, details, price, category, image) "
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "category" of relation "shop_product" does not exist
+LINE 1: ...O shop_Product(store_id_id, name, details, price, category, ...
+                                                             ^
+
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "Electronics"
+LINE 1: ...'asjchkjacbjacbjlaschjashc 145 zcmalskcn', '120', 'Electroni...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute("INSERT INTO shop_Product(store_id_id, name, details, price, category_id, image) "
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: invalid input syntax for type integer: "Electronics"
+LINE 1: ...'asjchkjacbjacbjlaschjashc 145 zcmalskcn', '120', 'Electroni...
+                                                             ^
+
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: can't adapt type 'Category'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 13, in product_insertion
+    cursor.execute("INSERT INTO shop_Product(store_id_id, name, details, price, category_id, image) "
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Web app\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Web app\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: can't adapt type 'Category'
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 10, in product_insertion
+    category = int(form.cleaned_data['category'])
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'Category'
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:django.request:Internal Server Error: /store/addproduct/
+Traceback (most recent call last):
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Web app\babaco\store\views.py", line 35, in store_addproduct_view
+    product_insertion(req, form)
+  File "D:\Web app\babaco\shop\sql_scripts.py", line 10, in product_insertion
+    category = form.cleaned_data['category']['cat_id']
+TypeError: 'Category' object is not subscriptable
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\sql_scripts.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
 ERROR:django.request:Internal Server Error: /
 Traceback (most recent call last):
   File "D:\Web app\django\lib\site-packages\django\template\base.py", line 470, in parse
     compile_func = self.tags[command]
-KeyError: 'else'
+KeyError: 'static'
 
 During handling of the above exception, another exception occurred:
 
@@ -496,24 +1673,14 @@ Traceback (most recent call last):
     return render(req, 'user/home.html', context)
   File "D:\Web app\django\lib\site-packages\django\shortcuts.py", line 19, in render
     content = loader.render_to_string(template_name, context, request, using=using)
-  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 62, in render_to_string
-    return template.render(context, request)
-  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 61, in render
-    return self.template.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 170, in render
-    return self._render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 162, in _render
-    return self.nodelist.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 938, in render
-    bit = node.render_annotated(context)
-  File "D:\Web app\django\lib\site-packages\django\template\base.py", line 905, in render_annotated
-    return self.render(context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 127, in render
-    compiled_parent = self.get_parent(context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
-    return self.find_template(parent, context)
-  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 103, in find_template
-    template, origin = context.template.engine.find_template(
+  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Web app\django\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Web app\django\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
   File "D:\Web app\django\lib\site-packages\django\template\engine.py", line 125, in find_template
     template = loader.get_template(name, skip=skip)
   File "D:\Web app\django\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
@@ -526,328 +1693,74 @@ Traceback (most recent call last):
     raise self.error(token, e)
   File "D:\Web app\django\lib\site-packages\django\template\base.py", line 476, in parse
     compiled_result = compile_func(self, token)
-  File "D:\Web app\django\lib\site-packages\django\template\defaulttags.py", line 965, in do_if
-    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
   File "D:\Web app\django\lib\site-packages\django\template\base.py", line 478, in parse
     raise self.error(token, e)
   File "D:\Web app\django\lib\site-packages\django\template\base.py", line 476, in parse
     compiled_result = compile_func(self, token)
-  File "D:\Web app\django\lib\site-packages\django\template\defaulttags.py", line 979, in do_if
-    nodelist = parser.parse(('endif',))
+  File "D:\Web app\django\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
   File "D:\Web app\django\lib\site-packages\django\template\base.py", line 472, in parse
     self.invalid_block_tag(token, command, parse_until)
   File "D:\Web app\django\lib\site-packages\django\template\base.py", line 522, in invalid_block_tag
     raise self.error(
-django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 27: 'else', expected 'endif'. Did you forget to register or load this tag?
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 20, in customer_login_view
-    return login_view(req, user='user', database=Customer, ret='home')
-  File "D:\Web app\babaco\shop\views.py", line 44, in login_view
-    if req.session[user + '_id']:
-  File "D:\Web app\django\lib\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
-    return self._session[key]
-KeyError: 'user_id'
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /login/
-Traceback (most recent call last):
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "D:\Web app\django\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\Web app\babaco\user\views.py", line 20, in customer_login_view
-    return login_view(req, user='user', database=Customer, ret='home')
-  File "D:\Web app\babaco\shop\views.py", line 44, in login_view
-    if req.session[user + '_id']:
-  File "D:\Web app\django\lib\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
-    return self._session[key]
-KeyError: 'user_id'
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:D:\Web app\babaco\shop\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-WARNING:django.request:Not Found: /logout/
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /logout/
-WARNING:django.request:Not Found: /favicon.ico
-WARNING:django.request:Not Found: /store/logout/
-WARNING:django.request:Not Found: /home
-WARNING:django.request:Not Found: /shop/register
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\urls.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /addproduct
-WARNING:django.request:Not Found: /favicon.ico
-ERROR:django.request:Internal Server Error: /store/addproduct/
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
-    self.check_response(response, callback)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
-    raise ValueError(
-ValueError: The view store.views.store_addproduct_view didn't return an HttpResponse object. It returned None instead.
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /store/addproduct/
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 61, in render
-    return self.template.render(context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 170, in render
-    return self._render(context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 162, in _render
-    return self.nodelist.render(context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 938, in render
-    bit = node.render_annotated(context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 905, in render_annotated
-    return self.render(context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 127, in render
-    compiled_parent = self.get_parent(context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
-    return self.find_template(parent, context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 103, in find_template
-    template, origin = context.template.engine.find_template(
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 129, in find_template
-    raise TemplateDoesNotExist(name, tried=tried)
-django.template.exceptions.TemplateDoesNotExist: store/base.html
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\store\views.py", line 26, in store_addproduct_view
-    return render(req, 'store/addproduct.html')
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
-    return template.render(context, request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 63, in render
-    reraise(exc, self.backend)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 84, in reraise
-    raise new from exc
-django.template.exceptions.TemplateDoesNotExist: store/base.html
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /store/addproduct/
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-psycopg2.errors.NotNullViolation: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
-DETAIL:  Failing row contains (1, Roadster shirt, size : small
-quantity : 10, 200.00, null, 2).
-
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\store\views.py", line 38, in store_addproduct_view
-    form.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 460, in save
-    self.instance.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 753, in save
-    self.save_base(using=using, force_insert=force_insert,
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 790, in save_base
-    updated = self._save_table(
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 895, in _save_table
-    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 933, in _do_insert
-    return manager._insert(
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 1254, in _insert
-    return query.get_compiler(using=using).execute_sql(returning_fields)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 1397, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 98, in execute
-    return super().execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 66, in execute
-    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
-    return executor(sql, params, many, context)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\utils.py", line 90, in __exit__
-    raise dj_exc_value.with_traceback(traceback) from exc_value
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-django.db.utils.IntegrityError: null value in column "store_id_id" of relation "shop_product" violates not-null constraint
-DETAIL:  Failing row contains (1, Roadster shirt, size : small
-quantity : 10, 200.00, null, 2).
-
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\forms.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /store/addproduct/
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\store\views.py", line 38, in store_addproduct_view
-    form.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 460, in save
-    self.instance.save()
-  File "C:\Users\vignesh\Desktop\babaco\shop\models.py", line 30, in save
-    super.save()
-AttributeError: type object 'super' has no attribute 'save'
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /store/addproduct/
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\store\views.py", line 38, in store_addproduct_view
-    form.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 460, in save
-    self.instance.save()
-  File "C:\Users\vignesh\Desktop\babaco\shop\models.py", line 32, in save
-    img = Image.open(self.image.path)
-NameError: name 'Image' is not defined
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-ERROR:django.request:Internal Server Error: /store/addproduct/
-Traceback (most recent call last):
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
-    response = get_response(request)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\vignesh\Desktop\babaco\store\views.py", line 38, in store_addproduct_view
-    form.save()
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 460, in save
-    self.instance.save()
-  File "C:\Users\vignesh\Desktop\babaco\shop\models.py", line 32, in save
-    img = Image.open(self.image.path)
-  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\PIL\Image.py", line 2809, in open
-    fp = builtins.open(filename, "rb")
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\vignesh\\Desktop\\babaco\\media\\default.jpg'
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\babaco\settings.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\babaco\settings.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\babaco\settings.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\store\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
-INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\shop\models.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 41 4
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 57 1
+DEBUG:PIL.PngImagePlugin:STREAM b'PLTE' 70 711
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 793 61419
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor

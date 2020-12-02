@@ -1,0 +1,16 @@
+#id_details{
+height: 50px;
+}
+
+label[for=id_store_id] {
+    display: none;
+}
+
+#id_store_id {
+    display: none;
+}
+
+#add_product_btn {
+    position: absolute;
+    transform: translate(-30%, -100%);
+}
