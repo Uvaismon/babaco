@@ -39,3 +39,16 @@ def store_addproduct_view(req):
             form = AddproductForm()
         context = {'form': form, 'title': 'add product', 'store_id_id': store_id}
         return render(req, 'store/addproduct.html', context)
+
+def profile(req):
+    if req.session.get('store_id'):
+        store_id = Store.objects.get(pk=req.session.get('store_id'))     #dbtrans
+        context = {'store_id': store_id}
+        return render(req, 'store/profile.html',context)
+    else:
+        return redirect('store/login/')
+
+
+def logout(req):
+    req.session.flush()
+    return redirect('home')

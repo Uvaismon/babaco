@@ -21,13 +21,13 @@
         <div class="auth">
             {% if user == 'user' %}
                 {% if user_name %}
-                        {{ user_name }}
+                    <a href="{% url 'profile' %}">{{ user_name }}</a>
                 {% else %}
                     <a href="{% url 'login' %}">Log in </a>
                 {% endif %}
             {% else %}
                 {% if store_name %}
-                        {{ store_name }}
+                    <a href="{% url 'profile.store' %}">{{ store_name }}</a>
                 {% else %}
                     <a href="{% url 'login.store' %}">Log in </a>
                 {% endif %}

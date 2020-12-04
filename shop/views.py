@@ -67,6 +67,3 @@ def login_view(req, user, database, ret):
     return render(req, 'shop/login.html', context)
 
 
-def logout(req):
-    req.session.flush()
-    return redirect('home')

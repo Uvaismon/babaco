@@ -22,6 +22,7 @@ class StoreRegistrationForm(RegistrationForm):
 
 
 class AddproductForm(ModelForm):
+    """Form to Add new product"""
     class Meta:
         model = Product
 

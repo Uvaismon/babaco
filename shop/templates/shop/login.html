@@ -34,6 +34,12 @@
                 <a href="{% url 'register.store' %}">Register Now</a>
                 {% endif %}
             </div>
+
+            {% if user == 'user' %}
+                <div class="text-muted ahc">Store User?
+                    <a href="{% url 'login.store' %}"> Login here</a>
+                </div>
+            {% endif %}
             <div class="form-group sgnbtn">
                 <button class="btn btn-outline-info" type="submit">Log In</button>
             </div>

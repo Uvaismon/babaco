@@ -1,0 +1,36 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/register.css' %}">
+{% endblock styleLinks %}
+
+{% block bodyContent %}
+
+    <main>
+        <div class="card form-card">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <div class="profile-info">
+                    <div class="user-info">
+                        <header>
+                            <h3>Profile info</h3>
+                        </header>
+                        <div class="label-data">
+                            <div class="label mb-2 mt-3">Name : {{ store_id.name }}</div>
+                        </div>
+                        <div class="label-data">
+                           <div class="label mb-2">Email : {{ store_id.email }}</div>
+                        </div>
+                        <div class="label-data">
+                           <div class="label mb-2">Contact : {{ store_id.contact }}</div>
+                        </div>
+                        <div class="label-data">
+                           <div class="label mb-2">Store Address : {{ store_id.location }}</div>
+                        </div>
+                        <button class="logout mt-4 btn btn-dark"><a href="logout/">Logout</a> </button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </main>
+{% endblock bodyContent %}
