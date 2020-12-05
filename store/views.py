@@ -43,7 +43,7 @@ def store_addproduct_view(req):
 def profile(req):
     if req.session.get('store_id'):
         store_id = Store.objects.get(pk=req.session.get('store_id'))     #dbtrans
-        context = {'store_id': store_id}
+        context = {'store_id': store_id, 'title': 'profile'}
         return render(req, 'store/profile.html',context)
     else:
         return redirect('store/login/')

@@ -9,3 +9,17 @@ body {
     font-size: x-large;
     font-weight: bolder;
 }
+
+.user-btn {
+    color: white;
+    background-color: black;
+}
+
+.user-btn:hover {
+    font-size: large;
+}
+
+.user-lgn-btn {
+    color: white;
+    background-color: black;
+}

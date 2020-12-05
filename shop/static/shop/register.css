@@ -20,3 +20,12 @@
 .ahc {
     padding-top: 10px;
 }
+
+.lgout-btn {
+    color: white;
+    background-color: black;
+}
+
+.lgout-btn:hover {
+    background-color: blue;
+}

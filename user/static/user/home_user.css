@@ -1,6 +1,39 @@
 .main-win {
     position: relative;
-    border: 2px;
     margin-left: 5%;
     margin-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+}
+
+.prod-cat {
+    font-size: small;
+    width: 280px;
+    text-align: right;    
+}
+
+.prod-card {
+    background-color: black;
+    width: 300px;
+}
+
+.prod-btn {
+    position: relative;
+    color: white;
+    background-color: black;
+}
+
+.prod-btn:hover {
+    background-color: blue;
+    transform: translate(0px, -3px);
+}
+
+.prod-ext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 280px;
+}
+
+.prod-price {
+    text-align: right;
 }
