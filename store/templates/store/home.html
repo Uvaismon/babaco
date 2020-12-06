@@ -1,5 +1,21 @@
 {% extends 'shop/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{%static 'user/home_user.css' %}">
+{% endblock styleLinks %}
 
 {%block bodyContent%}
-    <H1>Home</H1>
+    <div class="main-win">
+        {% for product in products %}
+        <div class="prod-card">
+            <img src="{{ media_url }}{{ product.image }}" alt="Card image cap" height="280px", width="280px">
+            <div class="prod-cat"> {{product.category.name}} </div>
+            <h5> {{ product.name }} </h5>
+            <div class="prod-ext">
+                <div><a href="#"><button class="prod-btn">View more</button></a></div>
+                <div class="prod-price">₹ {{ product.price }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock bodyContent %}

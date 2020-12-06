@@ -8,7 +8,7 @@ from shop.forms import LoginForm
 
 
 def home(req):
-    products = Product.objects.all()[:12]    # dbtrans
+    products = Product.objects.all()[:12]  # dbtrans
     context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'),
                'products': products, 'media_url': settings.MEDIA_URL}
     return render(req, 'user/home.html', context)
@@ -26,11 +26,12 @@ def customer_login_view(req):
 
 def userprofile(req):
     if req.session.get('user_id'):
-        customer_id = Customer.objects.get(pk=req.session.get('user_id'))      # dbtrans
+        customer_id = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
         context = {'customer_id': customer_id, 'title': 'profile'}
-        return render(req, 'user/userprofile.html',context)
+        return render(req, 'user/userprofile.html', context)
     else:
         return redirect('login/')
+
 
 def logout(req):
     req.session.flush()

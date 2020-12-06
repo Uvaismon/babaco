@@ -3,12 +3,18 @@ from django.http import HttpResponse
 from shop.views import login_view, registration_view
 from shop.models import Store, Product
 from .forms import StoreRegistrationForm, AddproductForm
+from babaco.settings import MEDIA_URL
 from django.contrib import messages
 from shop.tests import logging
 
 
 def home(req):
-    context = {'title': 'home', 'user': 'store', 'store_name': req.session.get('store_name')}
+    if not req.session.get('store_id'):
+        return redirect(store_login_view)
+    store = Store.objects.get(pk=req.session.get('store_id'))
+    products = Product.objects.filter(store_id=store)
+    context = {'title': 'home', 'user': 'store', 'store_name': req.session.get('store_name'),
+               'products': products, 'media_url': MEDIA_URL}
     return render(req, 'store/home.html', context)
 
 
@@ -30,7 +36,7 @@ def store_addproduct_view(req):
         # Checking if its a POST request and handle it.
         if req.method == 'POST':
             post = req.POST.copy()
-            post['store_id'] = Store.objects.get(pk=req.session.get('store_id'))    # dbtrans
+            post['store_id'] = Store.objects.get(pk=req.session.get('store_id'))  # dbtrans
             form = AddproductForm(post, req.FILES)
             if form.is_valid():
                 form.save()
@@ -40,11 +46,12 @@ def store_addproduct_view(req):
         context = {'form': form, 'title': 'add product', 'store_id_id': store_id}
         return render(req, 'store/addproduct.html', context)
 
+
 def profile(req):
     if req.session.get('store_id'):
-        store_id = Store.objects.get(pk=req.session.get('store_id'))     #dbtrans
+        store_id = Store.objects.get(pk=req.session.get('store_id'))  # dbtrans
         context = {'store_id': store_id, 'title': 'profile'}
-        return render(req, 'store/profile.html',context)
+        return render(req, 'store/profile.html', context)
     else:
         return redirect('store/login/')
 
