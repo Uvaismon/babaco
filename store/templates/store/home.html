@@ -2,7 +2,12 @@
 {% load static %}
 {% block styleLinks %}
     <link rel="stylesheet" type="text/css" href="{%static 'user/home_user.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'store/home_store.css' %}">
 {% endblock styleLinks %}
+
+{% block bar-nav %}
+    <a href="{% url 'addproduct.store' %}" class="add-prod">Add Product</a>
+{% endblock bar-nav %}
 
 {%block bodyContent%}
     <div class="main-win">
@@ -12,7 +17,7 @@
             <div class="prod-cat"> {{product.category.name}} </div>
             <h5> {{ product.name }} </h5>
             <div class="prod-ext">
-                <div><a href="#"><button class="prod-btn">View more</button></a></div>
+                <div><a href="#"><button class="prod-btn">Edit</button></a></div>
                 <div class="prod-price">₹ {{ product.price }}</div>
             </div>
         </div>

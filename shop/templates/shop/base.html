@@ -13,11 +13,14 @@
 <body>
 
     <div class="navbar">
-        {% if user == 'user' %}
-            <a href="{% url 'home' %}" class="navbar-brand">Babaco</a>
-        {% else %}
-            <a href="{% url 'home.store' %}" class="navbar-brand">Babaco</a>
-        {% endif %}
+        <div>
+            {% if user == 'user' %}
+                <a href="{% url 'home' %}" class="navbar-brand">Babaco</a>
+            {% else %}
+                <a href="{% url 'home.store' %}" class="navbar-brand">Babaco</a>
+            {% endif %}
+        </div>
+        {% block bar-nav %} {% endblock bar-nav %}
         <div class="auth">
             {% if user == 'user' %}
                 {% if user_name %}

@@ -16,7 +16,7 @@ body {
 }
 
 .user-btn:hover {
-    font-size: large;
+    color: lime;
 }
 
 .user-lgn-btn {
