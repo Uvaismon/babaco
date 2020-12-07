@@ -1,0 +1,30 @@
+.prod-ext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 280px;
+}
+.prod-cat {
+    font-size: small;
+    width: 280px;
+    text-align: left;
+}
+
+.sub-detail {
+    font-size: large;
+}
+
+.prod-img {
+    float : right;
+    width: 600px;
+    height: 600px;
+}
+
+.prod-btn {
+    color: white;
+    background-color: black;
+}
+
+.prod-btn:hover {
+    background-color: blue;
+    transform: translate(0px, -3px);
+}

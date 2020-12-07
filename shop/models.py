@@ -26,6 +26,7 @@ class Product(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=7)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='product_pics/')
+    deliverable = models.BooleanField(default=False)
 
 
 class Review(models.Model):

@@ -19,21 +19,13 @@
                 {% endif %}
                 <div class="spread">
                     {% for field in form %}
-                        <div class="elm">
+                        <div class="elm elm-{{forloop.counter}}">
                         <br> {{ field.label_tag }} {% if field.field.required %} * {% endif %} <br>
                         <span class="ml-2"> {{ field }}</span><br>
                         </div>
                     {% endfor %}
                 </div>
             </fieldset>
-            <!--div class="text-muted ahc">
-                Don't have an account?
-                {% if user == 'user' %}
-                    <a href="{% url 'register' %}">Register Now</a>
-                {% else %}
-                <a href="{% url 'register.store' %}">Register Now</a>
-                {% endif %}
-            </div-->
             <div class="form-group sgnbtn">
                 <button class="btn btn-outline-info" id=add_product_btn type="submit">Add Product</button>
             </div>

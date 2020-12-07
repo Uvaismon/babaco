@@ -14,7 +14,7 @@
             <div class="prod-cat"> {{product.category.name}} </div>
             <h5> {{ product.name }} </h5>
             <div class="prod-ext">
-                <div><a href="#"><button class="prod-btn">Edit</button></a></div>
+                <div><a href="{% url "prod_details" product.prod_id %}"><button class="prod-btn">View more</button></a></div>
                 <div class="prod-price">₹ {{ product.price }}</div>
             </div>
         </div>
@@ -24,13 +24,3 @@
 {% endblock bodyContent %}
 
 
-
- <!-- <div class="card" style="width: 90%; background-color: black;"> 
-            <img class="card-img-top" src="{{ media_url }}{{ product.image }}" alt="Card image cap" height="250px", width="250px">
-            <div class="card-body">
-                <span class="prod-cat">{{product.category.name}}</span>
-                <h5 class="card-title">{{product.name}}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">View</a>
-            </div>
-        </div> -->

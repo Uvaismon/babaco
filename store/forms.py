@@ -26,7 +26,7 @@ class AddproductForm(ModelForm):
     class Meta:
         model = Product
 
-        fields = ['name', 'details', 'price', 'category', 'image', 'store_id']
+        fields = ['name', 'details', 'price', 'category', 'image', 'store_id', 'deliverable']
         widgets = {
             'price': NumberInput(),
         }

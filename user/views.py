@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from babaco import settings
 from shop.views import registration_view, login_view
 from .forms import CustomerRegistrationForm
-from shop.models import Customer, Product
+from shop.models import Customer, Product, Store
 from shop.forms import LoginForm
 
 
@@ -32,7 +32,14 @@ def userprofile(req):
     else:
         return redirect('login/')
 
+def product_detail(req, prod_id):
+    product_name = Product.objects.get(prod_id=prod_id)
+    store_id = Product.store_id
+
+    context = {'prod_name': product_name ,'media_url': settings.MEDIA_URL,'store_id':store_id, 'user': 'user'}
+    return render(req,'user/product_details.html',context)
 
 def logout(req):
     req.session.flush()
     return redirect('home')
+
