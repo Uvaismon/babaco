@@ -1,0 +1,10 @@
+.prod-ext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 280px;
+}
+.prod-cat {
+    font-size: small;
+    width: 280px;
+    text-align: left;
+}

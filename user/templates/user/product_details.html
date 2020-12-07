@@ -1,0 +1,26 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{%static 'user/product_details.css' %}">
+{% endblock styleLinks %}
+
+{%block bodyContent%}
+    <div class="main-win">
+        <div class="prod-card">
+            <img src="{{ media_url }}{{ prod_name.image }}" alt="Card image cap" style="float : right" height="400px", width="600px" class="mr-5">
+            <div class="prod-cat text-muted mt-4" > {{ prod_name.category }} </div>
+            <h1> {{ prod_name.name }} </h1>
+            <div class="prod-ext mt-3 mb-2">
+                <div><h5>₹ {{ prod_name.price }}</h5></div>
+            </div>
+            <div class="mt-3 mb-2"><h3>Description : </h3></div>
+            <div class="prod-cat ml-4">{{ prod_name.details }}</div>
+
+            <div class="mt-3 mb-2"><h3>Seller's Info : </h3></div>
+            <div class="prod-cat ml-4">Shop name : {{ prod_name.store_id.name }}</div>
+            <div class="prod-cat ml-4">Ph.no : {{ prod_name.store_id.contact }}</div>
+            <div class="prod-cat ml-4">Mail : {{ prod_name.store_id.email }}</div>
+            <div class="prod-cat ml-4">Address : {{ prod_name.store_id.location }}</div>
+        </div>
+    </div>
+{% endblock bodyContent %}

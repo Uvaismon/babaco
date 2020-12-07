@@ -14,7 +14,7 @@
             <div class="prod-cat"> {{product.category.name}} </div>
             <h5> {{ product.name }} </h5>
             <div class="prod-ext">
-                <div><a href="#"><button class="prod-btn">View more</button></a></div>
+                <div><a href="{% url "prod_details" product.prod_id %}"><button class="prod-btn">View more</button></a></div>
                 <div class="prod-price">₹ {{ product.price }}</div>
             </div>
         </div>

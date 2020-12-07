@@ -375,3 +375,770 @@ INFO:django.utils.autoreload:D:\Web app\babaco\user\views.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
 INFO:django.utils.autoreload:D:\Web app\babaco\store\urls.py changed, reloading.
 DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: product_detail() missing 1 required positional argument: 'prod_id'
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\urls.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: '"prod_details"'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 14, in home
+    return render(req, 'user/home.html', context)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 814, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: '"prod_details"', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 36, in product_detail
+    return render(req,'user/product_details.html',prod_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than int.
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 36, in product_detail
+    return render(req,prod_id,'user/product_details.html')
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loaders\base.py", line 18, in get_template
+    for origin in self.get_template_sources(template_name):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loaders\filesystem.py", line 36, in get_template_sources
+    name = safe_join(template_dir, template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\_os.py", line 17, in safe_join
+    final_path = abspath(join(base, *paths))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 36, in product_detail
+    return render(prod_id,'user/product_details.html')
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 168, in render
+    with context.bind_template(self):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\context.py", line 244, in bind_template
+    updates.update(processor(self.request))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\context_processors.py", line 40, in debug
+    if settings.DEBUG and request.META.get('REMOTE_ADDR') in settings.INTERNAL_IPS:
+AttributeError: 'int' object has no attribute 'META'
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 36, in product_detail
+    product_name = Product.objects.get(id=prod_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'id' into field. Choices are: category, category_id, details, image, name, order, price, prod_id, review, store_id, store_id_id
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    return render(req,'user/product_details.html',context)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(' from 'product.objects.filter('
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /17/prod_details/product_pics/wallpapers.jpg
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /17/prod_details/product_pics/wallpapers.jpg
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    return render(req,'user/product_details.html',context)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' media' from 'url media'
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /17/prod_details/product_pics/wallpapers.jpg
+WARNING:django.request:Not Found: /17/prod_details/product_pics/wallpapers.jpg
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 39, in product_detail
+    return render(req,'user/product_details.html',context)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '/product_pics_url' from 'media_url/product_pics_url'
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /17/prod_details/product_pics/wallpapers.jpg
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 39, in product_detail
+    return render(req,'user/product_details.html',context)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 270, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader_tags.py", line 213, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '/product_pics' from 'media/product_pics'
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /17/prod_details/product_pics/wallpapers.jpg
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /17/prod_details/product_pics/wallpapers.jpg
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'ForwardManyToOneDescriptor'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(user_id=store_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 76, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'user_id' expected a number but got <django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor object at 0x0000016FDAC87C10>.
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'ForwardManyToOneDescriptor'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(user_id=store_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 76, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'user_id' expected a number but got <django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor object at 0x0000016FDAC87C10>.
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(store_id=store_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'store_id' into field. Choices are: contact, email, location, name, order, password, product, review, user_id
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(user_id=prod_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 429, in get
+    raise self.model.DoesNotExist(
+shop.models.Store.DoesNotExist: Store matching query does not exist.
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(store_id=prod_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'store_id' into field. Choices are: contact, email, location, name, order, password, product, review, user_id
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'ForwardManyToOneDescriptor'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(user_id=store_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 76, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'user_id' expected a number but got <django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor object at 0x000001FF5D077C10>.
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'ForwardManyToOneDescriptor'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(user_id=store_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 76, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'user_id' expected a number but got <django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor object at 0x0000017CBFBB7C10>.
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'ForwardManyToOneDescriptor'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 38, in product_detail
+    store_name = Store.objects.get(user_id=store_id)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 76, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'user_id' expected a number but got <django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor object at 0x0000017CBFBB7C10>.
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /store/profile/store/login/
+WARNING:django.request:Not Found: /store/profile/store/login/
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 37, in product_detail
+    store_id = Product.store_id.name
+AttributeError: 'ForwardManyToOneDescriptor' object has no attribute 'name'
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:django.request:Internal Server Error: /17/prod_details/
+Traceback (most recent call last):
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vignesh\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\vignesh\Desktop\babaco\user\views.py", line 39, in product_detail
+    context = {'prod_name': product_name ,'media_url': settings.MEDIA_URL,'store_id':store_id}
+NameError: name 'store_id' is not defined
+INFO:django.utils.autoreload:C:\Users\vignesh\Desktop\babaco\user\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+DEBUG:asyncio:Using proactor: IocpProactor
