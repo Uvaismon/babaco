@@ -14,7 +14,7 @@
 }
 
 .sgnbtn {
-    transform: translateX(80%);
+    transform: translateX(70%);
 }
 
 .ahc {
@@ -28,4 +28,19 @@
 
 .lgout-btn:hover {
     background-color: blue;
+}
+
+.auth {
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#id_location {
+    height: 50px;
+    width: 255px;
 }

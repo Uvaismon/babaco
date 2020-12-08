@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
+import datetime
+from shop.tests import logging
 
 from babaco import settings
 from shop.views import registration_view, login_view
-from .forms import CustomerRegistrationForm
-from shop.models import Customer, Product, Store
+from .forms import CustomerRegistrationForm, OrderForm
+from shop.models import Customer, Product, Store, Order
 from shop.forms import LoginForm
 
 
@@ -32,14 +34,38 @@ def userprofile(req):
     else:
         return redirect('login/')
 
+
 def product_detail(req, prod_id):
     product_name = Product.objects.get(prod_id=prod_id)
-    store_id = Product.store_id
+    store_id = product_name.store_id
+    context = {'prod_name': product_name, 'media_url': settings.MEDIA_URL, 'title': product_name.name,
+               'store_id': store_id, 'user': 'user', 'user_name': req.session.get('user_name')}
+    return render(req, 'user/product_details.html', context)
 
-    context = {'prod_name': product_name ,'media_url': settings.MEDIA_URL,'store_id':store_id, 'user': 'user'}
-    return render(req,'user/product_details.html',context)
 
 def logout(req):
     req.session.flush()
     return redirect('home')
 
+
+def order_view(req, prod_id):
+    if not req.session.get('user_id'):
+        return redirect(customer_login_view)
+
+        # Checking if its a POST request and handle it.
+    product = Product.objects.get(pk=prod_id)   # dbtrans
+    if req.method == 'POST':
+        post = req.POST.copy()
+        cust = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
+        post['cust_id'] = cust
+        post['prod_id'] = product
+        post['date'] = datetime.date.today()
+        form = OrderForm(post, req.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(home)
+    else:
+        form = OrderForm()
+    context = {'user': 'user', 'title': 'order', 'product': product, 'form': form,
+               'user_id': req.session.get('user_id'), 'user_name': req.session.get('user_name')}
+    return render(req, 'user/order_user.html', context)

@@ -1,0 +1,36 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{% static 'user/order_user.css' %}">
+{% endblock styleLinks %}
+
+{% block bodyContent %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="main-win ml-2">
+        <h2>Order confirmation</h2> <br>
+        <h4>Product: {{product.name}}</h4>
+        Seller: {{product.store_id.name}} <br> <br>
+        Delivery address <br>
+        {{form.address}} <br>
+        Quantity <br>
+        {{form.quantity}} <br> <br>
+        <div id="price">
+            Price per piece: {{product.price}} <br> <br>
+            Order price: 
+        </div>
+        <br>
+        <button class="btn btn-outline-info confirm-btn" id=order-confirm type="submit">Confirm</button>
+    </div>
+</form>
+
+{% endblock bodyContent %}
+
+{% block scriptLinks %}
+    <script type="text/javascript">
+        var prod_price = {{ product.price }};
+    </script>
+    <script type="text/javascript" src="{% static 'user/order_user.js' %}"></script>
+{% endblock scriptLinks %}

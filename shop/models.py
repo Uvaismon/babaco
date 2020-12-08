@@ -41,11 +41,11 @@ class Review(models.Model):
 class Order(models.Model):
     order_id = models.AutoField(primary_key=True)
     cust_id = models.ForeignKey('Customer', on_delete=models.SET_NULL, null=True)
-    store_id = models.ForeignKey('Store', on_delete=models.SET_NULL, null=True)
     prod_id = models.ForeignKey('Product', on_delete=models.SET_NULL, null=True)
     date = models.DateField(null=False)
     delivered = models.BooleanField(null=False, default=False)
     address = models.TextField(null=False)
+    quantity = models.IntegerField(default=1, max_length=10)
 
 
 class Category(models.Model):

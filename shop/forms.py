@@ -9,10 +9,10 @@ class RegistrationForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # resize input fields.
-        self.fields['name'].widget.attrs.update(size='30')
-        self.fields['email'].widget.attrs.update(size='30')
-        self.fields['password'].widget.attrs.update(size='30')
-        self.fields['password1'].widget.attrs.update(size='30')
+        self.fields['name'].widget.attrs.update(size='19')
+        self.fields['email'].widget.attrs.update(size='19')
+        self.fields['password'].widget.attrs.update(size='19')
+        self.fields['password1'].widget.attrs.update(size='19')
 
     password1 = CharField(widget=PasswordInput(), label='Confirm password')
 

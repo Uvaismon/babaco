@@ -11,8 +11,8 @@ from shop.tests import logging
 def home(req):
     if not req.session.get('store_id'):
         return redirect(store_login_view)
-    store = Store.objects.get(pk=req.session.get('store_id'))
-    products = Product.objects.filter(store_id=store)
+    store = Store.objects.get(pk=req.session.get('store_id'))    # db trans
+    products = Product.objects.filter(store_id=store)   # db trans
     context = {'title': 'home', 'user': 'store', 'store_name': req.session.get('store_name'),
                'products': products, 'media_url': MEDIA_URL}
     return render(req, 'store/home.html', context)
@@ -31,26 +31,26 @@ def store_registration_view(req):
 def store_addproduct_view(req):
     if not req.session.get('store_id'):
         return redirect(store_login_view)
+    store_id = req.session.get('store_id')
+    # Checking if its a POST request and handle it.
+    if req.method == 'POST':
+        post = req.POST.copy()
+        post['store_id'] = Store.objects.get(pk=store_id)  # dbtrans
+        form = AddproductForm(post, req.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(home)
     else:
-        store_id = req.session.get('store_id')
-        # Checking if its a POST request and handle it.
-        if req.method == 'POST':
-            post = req.POST.copy()
-            post['store_id'] = Store.objects.get(pk=req.session.get('store_id'))  # dbtrans
-            form = AddproductForm(post, req.FILES)
-            if form.is_valid():
-                form.save()
-                return redirect(home)
-        else:
-            form = AddproductForm()
-        context = {'form': form, 'title': 'add product', 'store_id_id': store_id}
-        return render(req, 'store/addproduct.html', context)
+        form = AddproductForm()
+    context = {'form': form, 'title': 'add product', 'store_name': req.session.get('store_name')}
+    return render(req, 'store/addproduct.html', context)
 
 
 def profile(req):
     if req.session.get('store_id'):
         store_id = Store.objects.get(pk=req.session.get('store_id'))  # dbtrans
-        context = {'store_id': store_id, 'title': 'profile'}
+        context = {'store_id': store_id, 'title': 'profile', 'user': 'store',
+                   'store_name': req.session.get('store_name')}
         return render(req, 'store/profile.html', context)
     else:
         return redirect('store/login/')
