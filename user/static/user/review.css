@@ -1,0 +1,21 @@
+.main-win {
+    padding-top: 10px;
+    font-size: large;
+}
+
+#id_remarks {
+    background-color: black;
+    border-color: red;
+    height: 200px;
+    width: 500px;
+    resize: none;
+    border-radius: 30px;
+    padding-left: 10px;
+    outline: none;
+    color: white;
+    padding-top: 10px;
+}
+
+.rev-btn:hover {
+    transform: translateY(-3px);
+}

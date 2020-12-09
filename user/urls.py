@@ -9,4 +9,5 @@ urlpatterns = [
     path('profile/logout/', views.logout, name='logout'),
     path('<int:prod_id>/prod_details/',views.product_detail, name='prod_details'),
     path('<int:prod_id>/order/', views.order_view, name='order'),
+    path('<int:prod_id>/review/', views.review_view, name='review'),
 ]

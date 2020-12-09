@@ -1,6 +1,6 @@
 from shop.forms import RegistrationForm
 from django.forms import ModelForm, PasswordInput, CharField, Textarea, TextInput, NumberInput
-from shop.models import Customer, Order
+from shop.models import Customer, Order, Review
 from django import forms
 
 
@@ -23,3 +23,9 @@ class OrderForm(ModelForm):
         fields = ['cust_id', 'prod_id', 'date', 'address', 'quantity']
 
 
+class ReviewForm(ModelForm):
+    """Form to handle product reviews done by users."""
+
+    class Meta:
+        model = Review
+        fields = ['prod_id', 'cust_id', 'rating', 'remarks', 'date']

@@ -1,0 +1,27 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block styleLinks %}  
+    <link rel="stylesheet" type="text/css" href="{% static 'user/review.css' %}">
+{% endblock styleLinks %}
+
+{% block bodyContent %}
+    <div class="main-win ml-4">
+        <form method="POST">   
+            {% csrf_token %}
+            User name: <br>
+            {{ cust.name }} <br> <br>
+            Product: <br>
+            {{ product.name }} <br> <br>
+            Rating: <br>
+            <span id="rating"><input type="range" min="1" max="5" value="50" id="slider" name="rating"> </span> <br> <br>
+            Remark: <br>
+            {{ form.remarks }} <br> <br>
+            <button type="submit" class="btn btn-outline-info rev-btn">Post</button>
+        </form>
+    </div>
+{% endblock bodyContent %}
+
+{% block scriptLinks %}
+    <script src="{% static 'user/review.js' %}"></script>
+{% endblock scriptLinks %}

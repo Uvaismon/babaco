@@ -5,7 +5,7 @@
 {% endblock styleLinks %}
 
 {%block bodyContent%}
-    <div class="main-win">
+    <div class="main-win ml-2">
         <div class="prod-card">
             <img src="{{ media_url }}{{ prod_name.image }}" alt="Card image cap" class="mr-5 prod-img">
             <div class="prod-cat text-muted mt-4" > {{ prod_name.category }} </div>
@@ -31,4 +31,29 @@
             <p class="ml-2">This product is not available for online ordering.<br>Please visit store to buy it.</p>
         {% endif %}
     </div>
+
+    <div class="review ml-2">
+        <H4 style="color: skyblue;">Reviews</H4> 
+        {% if reviews %}
+            {% for review in reviews %}
+                <div class="rev-box">
+                    <div class="header text-muted">
+                        <div class="ml-2"> By: {{review.cust_id.name}} </div>
+                        <div style="text-align: center;"> On: {{ review.date }}</div>
+                        <div class="mr-2" style="text-align: right;"> Rating: {{ review.rating }}</div>
+                    </div>
+                    <div class="ml-2">
+                        {{ review.remarks }}
+                    </div>
+                </div> <br>
+            {% endfor %}
+        {% else %}
+            This product doesn't have any reviews yet. <br> <br>
+        {% endif %}
+    </div>
+
+    <div class="add-rev ml-2">
+        <a href="{% url 'review' prod_name.prod_id %}"> <button class="prod-btn">Add Review</button> </a>
+    </div>
+
 {% endblock bodyContent %}

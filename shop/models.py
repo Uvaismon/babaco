@@ -33,9 +33,9 @@ class Review(models.Model):
     rev_id = models.AutoField(primary_key=True)
     prod_id = models.ForeignKey('Product', on_delete=models.CASCADE)
     cust_id = models.ForeignKey('Customer', on_delete=models.SET_NULL, null=True)
-    store_id = models.ForeignKey('Store', on_delete=models.CASCADE)
     rating = models.IntegerField(null=False)
     remarks = models.TextField()
+    date = models.DateField()
 
 
 class Order(models.Model):

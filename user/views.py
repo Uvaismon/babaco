@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 import datetime
 from babaco import settings
 from shop.views import registration_view, login_view
-from .forms import CustomerRegistrationForm, OrderForm
-from shop.models import Customer, Product, Store, Order
+from .forms import CustomerRegistrationForm, OrderForm, ReviewForm
+from shop.models import Customer, Product, Store, Order, Review
 
 
 def home(req):
@@ -33,7 +33,7 @@ def customer_login_view(req):
 def userprofile(req):
     if req.session.get('user_id'):
         customer_id = Customer.objects.get(pk=req.session.get('user_id'))                                      # dbtrans
-        context = {'customer_id': customer_id, 'title': 'profile'}
+        context = {'customer_id': customer_id, 'title': 'profile', 'user': 'user'}
         return render(req, 'user/userprofile.html', context)
     else:
         return redirect('login/')
@@ -42,8 +42,11 @@ def userprofile(req):
 def product_detail(req, prod_id):
     product_name = Product.objects.get(prod_id=prod_id)
     store_id = product_name.store_id
+    reviews = Review.objects.filter(prod_id=product_name)
+    if len(reviews) == 0:
+        reviews = None
     context = {'prod_name': product_name, 'media_url': settings.MEDIA_URL, 'title': product_name.name,
-               'store_id': store_id, 'user': 'user', 'user_name': req.session.get('user_name')}
+               'store_id': store_id, 'user': 'user', 'user_name': req.session.get('user_name'), 'reviews': reviews}
     return render(req, 'user/product_details.html', context)
 
 
@@ -64,7 +67,7 @@ def order_view(req, prod_id):
         post['cust_id'] = cust
         post['prod_id'] = product
         post['date'] = datetime.date.today()
-        form = OrderForm(post, req.FILES)
+        form = OrderForm(post)
         if form.is_valid():
             form.save()
             return redirect(home)
@@ -73,3 +76,24 @@ def order_view(req, prod_id):
     context = {'user': 'user', 'title': 'order', 'product': product, 'form': form,
                'user_id': req.session.get('user_id'), 'user_name': req.session.get('user_name')}
     return render(req, 'user/order_user.html', context)
+
+
+def review_view(req, prod_id):
+    if not req.session.get('user_id'):
+        return redirect(customer_login_view)
+    product = Product.objects.get(pk=prod_id)
+    user = Customer.objects.get(pk=req.session.get('user_id'))
+    if req.method == "POST":
+        post = req.POST.copy()
+        post['cust_id'] = user
+        post['prod_id'] = product
+        post['date'] = datetime.date.today()
+        form = ReviewForm(post)
+        if form.is_valid():
+            form.save()
+            return redirect(home)
+    form = ReviewForm()
+    context = {'user': 'user', 'user_name': req.session.get('user_name'), 'product': product, 'cust': user,
+               'title': 'product review', 'form': form}
+    return render(req, 'user/review.html', context)
+
