@@ -1,6 +1,7 @@
 from shop.forms import RegistrationForm
 from django.forms import ModelForm, PasswordInput, CharField, Textarea, TextInput, NumberInput
 from shop.models import Customer, Order
+from django import forms
 
 
 class CustomerRegistrationForm(RegistrationForm):
@@ -20,3 +21,5 @@ class OrderForm(ModelForm):
     class Meta:
         model = Order
         fields = ['cust_id', 'prod_id', 'date', 'address', 'quantity']
+
+

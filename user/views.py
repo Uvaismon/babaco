@@ -1,17 +1,21 @@
 from django.shortcuts import render, redirect
 import datetime
-from shop.tests import logging
-
 from babaco import settings
 from shop.views import registration_view, login_view
 from .forms import CustomerRegistrationForm, OrderForm
 from shop.models import Customer, Product, Store, Order
-from shop.forms import LoginForm
 
 
 def home(req):
-    products = Product.objects.all()[:12]  # dbtrans
-    context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'),
+    message = None
+    if req.method == 'POST':
+        products = Product.objects.filter(name__icontains=req.POST['search']) or \
+                   Product.objects.filter(details__icontains=req.POST['search'])                               # dbtrans
+    else:
+        products = Product.objects.all()[:12]  # dbtrans
+    if len(products) == 0:
+        message = "No Product matching the result."
+    context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
                'products': products, 'media_url': settings.MEDIA_URL}
     return render(req, 'user/home.html', context)
 
@@ -28,7 +32,7 @@ def customer_login_view(req):
 
 def userprofile(req):
     if req.session.get('user_id'):
-        customer_id = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
+        customer_id = Customer.objects.get(pk=req.session.get('user_id'))                                      # dbtrans
         context = {'customer_id': customer_id, 'title': 'profile'}
         return render(req, 'user/userprofile.html', context)
     else:
@@ -53,10 +57,10 @@ def order_view(req, prod_id):
         return redirect(customer_login_view)
 
         # Checking if its a POST request and handle it.
-    product = Product.objects.get(pk=prod_id)   # dbtrans
+    product = Product.objects.get(pk=prod_id)                                                                  # dbtrans
     if req.method == 'POST':
         post = req.POST.copy()
-        cust = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
+        cust = Customer.objects.get(pk=req.session.get('user_id'))                                             # dbtrans
         post['cust_id'] = cust
         post['prod_id'] = product
         post['date'] = datetime.date.today()

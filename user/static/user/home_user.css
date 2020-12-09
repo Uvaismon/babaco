@@ -38,3 +38,36 @@
 .prod-price {
     text-align: right;
 }
+
+#search {
+    width: 350px;
+    /* width: 80%; */
+    background-color: black;
+    color: white;
+    border: red;
+    border-style: solid;
+    border-radius: 30px;
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+#go {
+    position: absolute;
+    background: none;
+    color: red;
+    border: none;
+    transform: translate(-35px, 1px);
+}
+
+#go:focus {
+    outline: none;
+}
+
+.message {
+    padding: 10px;
+    color: red;
+}

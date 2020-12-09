@@ -5,9 +5,26 @@
 <link rel="stylesheet" type="text/css" href="{% static 'user/home_user.css' %}">
 {% endblock styleLinks %}
 
+{% block bar-nav %}
+<form method="POST">
+    <div class="bar">
+            {% csrf_token %}
+            <input type="text" name="search" id="search" maxlength="32" placeholder="Search">
+            <button id="go" type="submit">Go</button>
+        </div>
+    </form>
+{% endblock bar-nav %}
+
 {% block bodyContent %}
     
     <div class="main-win">
+
+        {% if message %}
+            <div class="message">
+                {{message}}
+            </div>
+        {% endif %}
+
         {% for product in products %}
         <div class="prod-card">
             <img src="{{ media_url }}{{ product.image }}" alt="Card image cap" height="280px", width="280px">
