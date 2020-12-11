@@ -5,9 +5,17 @@
     <link rel="stylesheet" type="text/css" href="{%static 'store/home_store.css' %}">
 {% endblock styleLinks %}
 
-{% block bar-nav %}
-    <a href="{% url 'addproduct.store' %}" class="add-prod">Add Product</a>
-{% endblock bar-nav %}
+{% block side_nav %}
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{% url 'addproduct.store' %}">Add products</a>
+        <a href="{% url 'orders.store' %}">Orders</a>
+        {% if store_name %}
+            <a href="{% url 'logout' %}" class="mt-4 nav-logout">Logout</a>
+        {% endif %}
+    </div> 
+    <button class="sidenav-btn navbar-brand" onclick="openNav()">☰</button>
+{% endblock side_nav %}
 
 {%block bodyContent%}
     <div class="main-win">
