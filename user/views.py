@@ -3,7 +3,7 @@ import datetime
 from babaco import settings
 from shop.views import registration_view, login_view
 from .forms import CustomerRegistrationForm, OrderForm, ReviewForm
-from shop.models import Customer, Product, Store, Order, Review
+from shop.models import Customer, Product, Store, Order, Review, Category
 
 
 def home(req):
@@ -12,11 +12,11 @@ def home(req):
         products = Product.objects.filter(name__icontains=req.POST['search']) or \
                    Product.objects.filter(details__icontains=req.POST['search'])                               # dbtrans
     else:
-        products = Product.objects.all()[:12]  # dbtrans
+        products = Product.objects.all()[:8]  # dbtrans
     if len(products) == 0:
-        message = "No Product matching the result."
+        message = "No result found!"
     context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
-               'products': products, 'media_url': settings.MEDIA_URL}
+               'products': products, 'media_url': settings.MEDIA_URL, 'categories': Category.objects.all()}
     return render(req, 'user/home.html', context)
 
 
@@ -32,7 +32,7 @@ def customer_login_view(req):
 
 def userprofile(req):
     if req.session.get('user_id'):
-        customer_id = Customer.objects.get(pk=req.session.get('user_id'))                                      # dbtrans
+        customer_id = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
         context = {'customer_id': customer_id, 'title': 'profile', 'user': 'user'}
         return render(req, 'user/userprofile.html', context)
     else:
@@ -60,10 +60,10 @@ def order_view(req, prod_id):
         return redirect(customer_login_view)
 
         # Checking if its a POST request and handle it.
-    product = Product.objects.get(pk=prod_id)                                                                  # dbtrans
+    product = Product.objects.get(pk=prod_id)  # dbtrans
     if req.method == 'POST':
         post = req.POST.copy()
-        cust = Customer.objects.get(pk=req.session.get('user_id'))                                             # dbtrans
+        cust = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
         post['cust_id'] = cust
         post['prod_id'] = product
         post['date'] = datetime.date.today()
@@ -97,3 +97,24 @@ def review_view(req, prod_id):
                'title': 'product review', 'form': form}
     return render(req, 'user/review.html', context)
 
+
+def filtered_view(req, cat_id=-1):
+
+    if req.method == 'POST':
+        return home(req)
+
+    message = None
+    if cat_id == -1:
+        products = Product.objects.all()
+    else:
+        products = Product.objects.filter(category=cat_id)
+    if len(products) == 0:
+        message = "No result found!"
+    context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
+               'products': products, 'media_url': settings.MEDIA_URL, 'categories': Category.objects.all(),
+               'search_bar': None}
+    return render(req, 'user/home.html', context)
+
+
+def filtered_view_all(req):
+    return filtered_view(req)

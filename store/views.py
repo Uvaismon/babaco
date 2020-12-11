@@ -35,7 +35,7 @@ def store_addproduct_view(req):
     # Checking if its a POST request and handle it.
     if req.method == 'POST':
         post = req.POST.copy()
-        post['store_id'] = Store.objects.get(pk=store_id)  # dbtrans
+        post['store_id'] = Store.objects.get(pk=store_id)                                                      # dbtrans
         form = AddproductForm(post, req.FILES)
         if form.is_valid():
             form.save()

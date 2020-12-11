@@ -15,6 +15,22 @@
     <div class="navbar">
         <div>
             {% if user == 'user' %}
+            
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="{% url 'filtered_view_all' %}">View all products</a>
+                    <span id="cat-list">Shop by category</span>
+                    {% for category in categories %}
+                    <a href="{% url 'filtered_view' category.cat_id %}" class="ml-2">{{ category.name }}</a>
+                    {% endfor %}
+                    {% if user_name %}
+                        <a href="#" class="mt-2">Orders</a>
+                        <a href="{% url 'logout' %}" class="mt-4 nav-logout">Logout</a>
+                        {% endif %}
+                </div>
+                 {% if categories %}   
+                    <button class="sidenav-btn navbar-brand" onclick="openNav()">☰</button>
+                {% endif %}
                 <a href="{% url 'home' %}" class="navbar-brand">Babaco</a>
             {% else %}
                 <a href="{% url 'home.store' %}" class="navbar-brand">Babaco</a>
@@ -41,6 +57,7 @@
     {% block bodyContent %} {% endblock bodyContent %}
 
     {% block scriptLinks %} {% endblock scriptLinks %}
+    <script src="{% static 'shop/base.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>

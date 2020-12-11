@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import LoginForm
+import hashlib
 
 
 def registration_view(req, user, reg_form, ret):
@@ -14,6 +15,9 @@ def registration_view(req, user, reg_form, ret):
         form = reg_form(req.POST)
         form.verify()
         if form.is_valid():
+            post = req.POST.copy()
+            post['password'] = hashlib.sha256(form.cleaned_data['password'].encode()).hexdigest()
+            form = reg_form(post)
             form.save()  # dbtrans
             return redirect(ret)
         else:
@@ -43,18 +47,18 @@ def login_view(req, user, database, ret):
         if form.is_valid():
             # Retrieving form data.
             email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
+            password = hashlib.sha256(form.cleaned_data['password'].encode()).hexdigest()
             # Checking against database data.
-            if database.objects.filter(email=email):    # dbtrans
-                x = database.objects.get(email=email)  # dbtrans
+            if database.objects.filter(email=email):                                                           # dbtrans
+                x = database.objects.get(email=email)                                                          # dbtrans
                 if x.password != password:
                     form.add_error('password', 'Wrong Password')
             else:
                 form.add_error('email', 'Email not registered')
 
         if form.is_valid():
-            req.session[user + '_id'] = database.objects.get(email=email).user_id   # dbtrans
-            req.session[user + '_name'] = database.objects.get(email=email).name    # dbtrans
+            req.session[user + '_id'] = database.objects.get(email=email).user_id                              # dbtrans
+            req.session[user + '_name'] = database.objects.get(email=email).name                               # dbtrans
             return redirect(ret)
         else:
             if form.has_error('email'):

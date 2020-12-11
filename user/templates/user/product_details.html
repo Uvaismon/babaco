@@ -38,7 +38,13 @@
             {% for review in reviews %}
                 <div class="rev-box">
                     <div class="header text-muted">
-                        <div class="ml-2"> By: {{review.cust_id.name}} </div>
+                        <div class="ml-2"> By: 
+                            {% if review.cust_id.name %} 
+                                {{review.cust_id.name}} 
+                            {% else %}
+                                Anonymous
+                            {% endif %}
+                        </div>
                         <div style="text-align: center;"> On: {{ review.date }}</div>
                         <div class="mr-2" style="text-align: right;"> Rating: {{ review.rating }}</div>
                     </div>

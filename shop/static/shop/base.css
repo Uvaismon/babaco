@@ -23,3 +23,52 @@ body {
     color: white;
     background-color: black;
 }
+
+.sidenav-btn {
+    background: none;
+    border: none;
+}
+
+.sidenav-btn:focus {
+    outline: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden; 
+    padding-top: 40px;
+    transition: 0.5s;
+    font-size: large;
+}
+
+.sidenav a {
+    padding: 0px 0px 0px 12px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+}
+  
+#cat-list {
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    padding-left: 12px;
+}
