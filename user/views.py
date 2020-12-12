@@ -4,6 +4,7 @@ from babaco import settings
 from shop.views import registration_view, login_view
 from .forms import CustomerRegistrationForm, OrderForm, ReviewForm
 from shop.models import Customer, Product, Store, Order, Review, Category
+from django.core.paginator import Paginator
 
 
 def home(req):
@@ -118,3 +119,19 @@ def filtered_view(req, cat_id=-1):
 
 def filtered_view_all(req):
     return filtered_view(req)
+
+def myorders_view(req):
+    if req.session.get('user_id'):
+        products = Order.objects.filter(cust_id=req.session.get('user_id'))  # dbtrans
+        if  products:
+            paginator = Paginator(products, 2)
+            page = req.GET.get('page')
+            products= paginator.get_page(page)
+            context = {'products': products}
+            return render(req, 'user/orders.html', context)
+        else:
+            context = {'products': 'zero'}
+            return render(req, 'user/orders.html', context)
+
+    else:
+        return redirect('login')

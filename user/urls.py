@@ -12,4 +12,5 @@ urlpatterns = [
     path('<int:prod_id>/review/', views.review_view, name='review'),
     path('<int:cat_id>/view', views.filtered_view, name='filtered_view'),
     path('view', views.filtered_view_all, name='filtered_view_all'),
+    path('orders/', views.myorders_view,name='My orders')
 ]
