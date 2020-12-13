@@ -11,7 +11,7 @@ def home(req):
     message = None
     if req.method == 'POST':
         products = Product.objects.filter(name__icontains=req.POST['search']) or \
-                   Product.objects.filter(details__icontains=req.POST['search'])                               # dbtrans
+                   Product.objects.filter(details__icontains=req.POST['search'])  # dbtrans
     else:
         products = Product.objects.all()[:8]  # dbtrans
     if len(products) == 0:
@@ -100,7 +100,6 @@ def review_view(req, prod_id):
 
 
 def filtered_view(req, cat_id=-1):
-
     if req.method == 'POST':
         return home(req)
 
@@ -120,17 +119,18 @@ def filtered_view(req, cat_id=-1):
 def filtered_view_all(req):
     return filtered_view(req)
 
+
 def myorders_view(req):
     if req.session.get('user_id'):
         products = Order.objects.filter(cust_id=req.session.get('user_id'))  # dbtrans
-        if  products:
+        if products:
             paginator = Paginator(products, 2)
             page = req.GET.get('page')
-            products= paginator.get_page(page)
-            context = {'products': products}
+            products = paginator.get_page(page)
+            context = {'products': products, 'title': 'orders'}
             return render(req, 'user/orders.html', context)
         else:
-            context = {'products': 'zero'}
+            context = {'products': 'zero', 'title': 'orders'}
             return render(req, 'user/orders.html', context)
 
     else:

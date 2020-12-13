@@ -63,6 +63,12 @@ def orders_view(req):
         products = Order.objects.all()
         storeorder_id = []
 
+        if req.method == 'POST':
+            order_id = req.POST['order_id']
+            order = Order.objects.get(pk=order_id)
+            order.delivered = True
+            order.save()
+
         for product in products:
             order_id = product.order_id
             prod_id = product.prod_id
@@ -74,11 +80,11 @@ def orders_view(req):
             paginator = Paginator(storeorder_id, 2)
             page = req.GET.get('page')
             storeorder_id = paginator.get_page(page)
-            context = {'order_details': storeorder_id}
+            context = {'order_details': storeorder_id, 'title': 'orders'}
             return render(req, 'store/storeorders.html', context)
 
         except:
-            context = {'order_details': 'zero'}
+            context = {'order_details': 'zero', 'title': 'orders'}
             return render(req, 'store/storeorders.html', context)
     else:
         return redirect('store/login/')

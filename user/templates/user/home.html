@@ -14,7 +14,7 @@
             <a href="{% url 'filtered_view' category.cat_id %}" class="ml-2">{{ category.name }}</a>
         {% endfor %}
         {% if user_name %}
-            <a href="orders" class="mt-2">Orders</a>
+            <a href="{%url 'my_orders'%}" class="mt-2">Orders</a>
             <a href="{% url 'logout' %}" class="mt-4 nav-logout">Logout</a>
         {% endif %}
     </div> 
