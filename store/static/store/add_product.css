@@ -11,3 +11,7 @@ label[for=id_store_id] {
     position: absolute;
     transform: translate(-30%, -100%);
 }
+
+#id_details {
+    resize: none;
+}

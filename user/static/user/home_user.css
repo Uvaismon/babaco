@@ -41,7 +41,6 @@
 
 #search {
     width: 350px;
-    /* width: 80%; */
     background-color: black;
     color: white;
     border: red;
@@ -70,4 +69,10 @@
 .message {
     padding: 10px;
     color: red;
+}
+
+hr {
+    background-color: #818181;
+    height: 1.5px;
+    margin: 0 12px 0 12px;
 }

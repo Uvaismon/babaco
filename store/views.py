@@ -43,7 +43,7 @@ def store_addproduct_view(req):
             return redirect(home)
     else:
         form = AddproductForm()
-    context = {'form': form, 'title': 'add product', 'store_name': req.session.get('store_name')}
+    context = {'form': form, 'title': 'add product', 'store_name': req.session.get('store_name'), 'mode': 'Add'}
     return render(req, 'store/addproduct.html', context)
 
 
@@ -93,3 +93,20 @@ def orders_view(req):
 def logout(req):
     req.session.flush()
     return redirect('home')
+
+
+def edit_product(req, prod_id):
+    if not req.session.get('store_id'):
+        return redirect(store_login_view)
+    prod = Product.objects.get(pk=prod_id)
+    if req.method == 'POST':
+        post = req.POST.copy()
+        post['store_id'] = req.session.get('store_id')
+        form = AddproductForm(post, instance=prod)
+        if form.is_valid():
+            form.save()
+            return redirect(home)
+    form = AddproductForm(instance=prod)
+    context = {'form': form, 'title': 'edit-product', 'user': 'store', 'store_name': req.session.get('store_name'),
+               'mode': 'Edit'}
+    return render(req, 'store/addproduct.html', context)

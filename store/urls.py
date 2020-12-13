@@ -9,4 +9,5 @@ urlpatterns = [
     path('profile/', views.profile, name='profile.store'),
     path('profile/logout/', views.logout, name='logout.store'),
     path('orders/', views.orders_view, name='orders.store'),
+    path('<int:prod_id>/edit-product', views.edit_product, name='edit_product'),
 ]
