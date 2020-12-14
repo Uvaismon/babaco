@@ -123,14 +123,16 @@ def filtered_view_all(req):
 def myorders_view(req):
     if req.session.get('user_id'):
         products = Order.objects.filter(cust_id=req.session.get('user_id'))  # dbtrans
+        user='user'
+        user_name=req.session.get('user_name')
         if products:
             paginator = Paginator(products, 2)
             page = req.GET.get('page')
             products = paginator.get_page(page)
-            context = {'products': products, 'title': 'orders'}
+            context = {'products': products, 'title': 'orders','user':'user','user_name':req.session.get('user_name')}
             return render(req, 'user/orders.html', context)
         else:
-            context = {'products': 'zero', 'title': 'orders'}
+            context = {'products': 'zero', 'title': 'orders','user':'user','user_name':req.session.get('user_name')}
             return render(req, 'user/orders.html', context)
 
     else:
