@@ -5,6 +5,7 @@ from shop.models import Store, Product, Order
 from .forms import StoreRegistrationForm, AddproductForm
 from babaco.settings import MEDIA_URL
 from django.core.paginator import Paginator
+from django.http import HttpResponseForbidden
 from django.contrib import messages
 from shop.tests import logging
 
@@ -99,6 +100,8 @@ def edit_product(req, prod_id):
     if not req.session.get('store_id'):
         return redirect(store_login_view)
     prod = Product.objects.get(pk=prod_id)
+    if prod.store_id.user_id != req.session.get('store_id'):
+        return HttpResponseForbidden()
     if req.method == 'POST':
         post = req.POST.copy()
         post['store_id'] = req.session.get('store_id')
