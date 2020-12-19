@@ -19,9 +19,9 @@
             {% block side_nav %} {% endblock side_nav %}
 
             {% if user == 'user' %}
-                <a href="{% url 'home' %}" class="navbar-brand">Babaco</a>
+                <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'shop/logo.png' %}" alt="Babaco" style="height: 40px;"></a>
             {% else %}
-                <a href="{% url 'home.store' %}" class="navbar-brand">Babaco</a>
+                <a href="{% url 'home.store' %}" class="navbar-brand"><img src="{% static 'shop/logo.png' %}" alt="Babaco" style="height: 40px;"></a>
             {% endif %}
             
         </div>
