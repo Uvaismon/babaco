@@ -23,6 +23,10 @@
                         </div>
                         <br>
                         <a href="logout/"><button class="lgout-btn">Logout</button></a>
+                        <form method="POST">
+                            {% csrf_token %}
+                                <button class="lgout-btn mt-2 " type="submit" name="cust_id" value="{{ customer.cust_id }}">Delete my acount</button>
+                        </form>
                     </div>
                 </div>
             </fieldset>

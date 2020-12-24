@@ -3,6 +3,7 @@ from PIL import Image
 
 
 class Store(models.Model):
+    objects = None
     user_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50, null=False)
     location = models.TextField(null=False)
@@ -19,6 +20,7 @@ class Customer(models.Model):
 
 
 class Product(models.Model):
+    objects = None
     prod_id = models.AutoField(primary_key=True)
     store_id = models.ForeignKey('Store', on_delete=models.CASCADE, blank=True)
     name = models.CharField(max_length=32, null=False)
@@ -39,6 +41,7 @@ class Review(models.Model):
 
 
 class Order(models.Model):
+    objects = None
     order_id = models.AutoField(primary_key=True)
     cust_id = models.ForeignKey('Customer', on_delete=models.SET_NULL, null=True)
     prod_id = models.ForeignKey('Product', on_delete=models.SET_NULL, null=True)

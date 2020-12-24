@@ -1,13 +1,11 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from shop.views import login_view, registration_view
-from shop.models import Store, Product, Order
-from .forms import StoreRegistrationForm, AddproductForm
-from babaco.settings import MEDIA_URL
 from django.core.paginator import Paginator
 from django.http import HttpResponseForbidden
-from django.contrib import messages
-from shop.tests import logging
+from django.shortcuts import render, redirect
+
+from babaco.settings import MEDIA_URL
+from shop.models import Store, Product, Order
+from shop.views import login_view, registration_view
+from .forms import StoreRegistrationForm, AddproductForm
 
 
 def home(req):
@@ -49,6 +47,11 @@ def store_addproduct_view(req):
 
 
 def profile(req):
+    if req.method == 'POST':
+        store_id = Store.objects.get(pk=req.session.get('store_id'))  # dbtrans
+        store_id.delete()
+        req.session.flush()
+        return redirect('home')
     if req.session.get('store_id'):
         store_id = Store.objects.get(pk=req.session.get('store_id'))  # dbtrans
         context = {'store_id': store_id, 'title': 'profile', 'user': 'store',

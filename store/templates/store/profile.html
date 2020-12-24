@@ -29,6 +29,10 @@
                         </div>
                         <br>
                         <a href="logout/"><button class="lgout-btn">Logout</button></a>
+                        <form method="POST">
+                            {% csrf_token %}
+                                <button class="lgout-btn mt-2 " type="submit" name="store_id" value="{{ store.store_id }}">Delete my acount</button>
+                        </form>
                     </div>
                 </div>
             </fieldset>

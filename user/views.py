@@ -33,6 +33,12 @@ def customer_login_view(req):
 
 
 def userprofile(req):
+    if req.method == 'POST':
+        cust_id = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
+        cust_id.delete()
+        req.session.flush()
+        return redirect('home')
+
     if req.session.get('user_id'):
         customer_id = Customer.objects.get(pk=req.session.get('user_id'))  # dbtrans
         context = {'customer_id': customer_id, 'title': 'profile', 'user': 'user'}
@@ -133,8 +139,7 @@ def filtered_view_all(req):
 def myorders_view(req):
     if req.session.get('user_id'):
         products = Order.objects.filter(cust_id=req.session.get('user_id'))  # dbtrans
-        user='user'
-        user_name=req.session.get('user_name')
+
         if products:
             paginator = Paginator(products, 2)
             page = req.GET.get('page')
