@@ -5,6 +5,7 @@ from shop.views import registration_view, login_view
 from .forms import CustomerRegistrationForm, OrderForm, ReviewForm
 from shop.models import Customer, Product, Store, Order, Review, Category
 from django.core.paginator import Paginator
+from django.http import HttpResponseForbidden
 
 
 def home(req):
@@ -41,13 +42,22 @@ def userprofile(req):
 
 
 def product_detail(req, prod_id):
+
+    if req.method == 'POST':
+        rev_id = int(req.POST.get('rev_id'))
+        rev = Review.objects.get(pk=rev_id)
+        if rev.cust_id.user_id != req.session.get('user_id'):
+            return HttpResponseForbidden()
+        rev.delete()
+
     product_name = Product.objects.get(prod_id=prod_id)
     store_id = product_name.store_id
     reviews = Review.objects.filter(prod_id=product_name)
     if len(reviews) == 0:
         reviews = None
     context = {'prod_name': product_name, 'media_url': settings.MEDIA_URL, 'title': product_name.name,
-               'store_id': store_id, 'user': 'user', 'user_name': req.session.get('user_name'), 'reviews': reviews}
+               'store_id': store_id, 'user': 'user', 'user_name': req.session.get('user_name'), 'reviews': reviews,
+               'user_id': req.session.get('user_id')}
     return render(req, 'user/product_details.html', context)
 
 
@@ -92,7 +102,7 @@ def review_view(req, prod_id):
         form = ReviewForm(post)
         if form.is_valid():
             form.save()
-            return redirect(home)
+            return redirect(product_detail, prod_id=prod_id)
     form = ReviewForm()
     context = {'user': 'user', 'user_name': req.session.get('user_name'), 'product': product, 'cust': user,
                'title': 'product review', 'form': form}
