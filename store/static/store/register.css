@@ -1,8 +1,20 @@
-.spread {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+@media(min-width: 500px) {
+    .spread {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sgnbtn {
+        transform: translateX(75%);
+    }
+    
+    .sgnbtn {
+        transform: translateX(85%);
+    }
 }
 
-.sgnbtn {
-    transform: translateX(85%);
+@media (max-width: 500px) {
+    .form-card-mini {
+        transform: translate(-40%, -35%) !important;
+    }
 }
