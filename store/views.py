@@ -58,7 +58,7 @@ def profile(req):
                    'store_name': req.session.get('store_name')}
         return render(req, 'store/profile.html', context)
     else:
-        return redirect('store/login/')
+        return redirect(login_view)
 
 
 def orders_view(req):
@@ -106,13 +106,17 @@ def edit_product(req, prod_id):
     if prod.store_id.user_id != req.session.get('store_id'):
         return HttpResponseForbidden()
     if req.method == 'POST':
-        post = req.POST.copy()
-        post['store_id'] = req.session.get('store_id')
-        form = AddproductForm(post, instance=prod)
-        if form.is_valid():
-            form.save()
+        if req.POST.get('mode') == 'edit':
+            post = req.POST.copy()
+            post['store_id'] = req.session.get('store_id')
+            form = AddproductForm(post, instance=prod)
+            if form.is_valid():
+                form.save()
+                return redirect(home)
+        elif req.POST.get('mode') == 'delete':
+            prod.delete()
             return redirect(home)
     form = AddproductForm(instance=prod)
     context = {'form': form, 'title': 'edit-product', 'user': 'store', 'store_name': req.session.get('store_name'),
                'mode': 'Edit'}
-    return render(req, 'store/addproduct.html', context)
+    return render(req, 'store/editProduct.html', context)

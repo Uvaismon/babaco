@@ -1,0 +1,9 @@
+{% extends 'store/addproduct.html' %}
+{% load static %}
+
+{% block btns %}
+    <div class="form-group" style="float: right;">
+        <button class="btn btn-outline-info" type="submit" value="delete" name="mode">Delete</button>
+        <button class="btn btn-outline-info" type="submit" value="edit" name="mode">{{mode}} Product</button>
+    </div>
+{% endblock btns %}

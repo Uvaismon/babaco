@@ -6,8 +6,7 @@
 {% endblock styleLinks %}
 
 {% block bodyContent %}
-
-    <div class="card form-card">
+    <div class="prod-form-card">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -29,7 +28,7 @@
                         <span class="ml-2"> {{ form.details }}</span><br>
                     </div>
 
-                    <div class="elm elm-3">
+                    <div class="elm elm-3" style="float: left;">
                         <br> {{ form.price.label_tag }} {% if form.price.field.required %} * {% endif %} <br>
                         <span class="ml-2"> {{ form.price }}</span><br>
                     </div>
@@ -51,9 +50,11 @@
 
                 </div>
             </fieldset>
-            <div class="form-group sgnbtn">
-                <button class="btn btn-outline-info" id=add_product_btn type="submit">{{mode}} Product</button>
-            </div>
+            {% block btns %}
+                <div class="form-group sgnbtn">
+                    <button class="btn btn-outline-info" type="submit">{{mode}} Product</button>
+                </div>
+            {% endblock btns %}
         </form>
     </div>
 
