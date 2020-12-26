@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
 from django.http import HttpResponseForbidden
 from django.shortcuts import render, redirect
-
+from shop.tests import logging
 from babaco.settings import MEDIA_URL
 from shop.models import Store, Product, Order
 from shop.views import login_view, registration_view

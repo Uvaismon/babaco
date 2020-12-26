@@ -48,7 +48,6 @@ def userprofile(req):
 
 
 def product_detail(req, prod_id):
-
     if req.method == 'POST':
         rev_id = int(req.POST.get('rev_id'))
         rev = Review.objects.get(pk=rev_id)
@@ -144,10 +143,11 @@ def myorders_view(req):
             paginator = Paginator(products, 2)
             page = req.GET.get('page')
             products = paginator.get_page(page)
-            context = {'products': products, 'title': 'orders','user':'user','user_name':req.session.get('user_name')}
+            context = {'products': products, 'title': 'orders', 'user': 'user',
+                       'user_name': req.session.get('user_name')}
             return render(req, 'user/orders.html', context)
         else:
-            context = {'products': 'zero', 'title': 'orders','user':'user','user_name':req.session.get('user_name')}
+            context = {'products': 'zero', 'title': 'orders', 'user': 'user', 'user_name': req.session.get('user_name')}
             return render(req, 'user/orders.html', context)
 
     else:

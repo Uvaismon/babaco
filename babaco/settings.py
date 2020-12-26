@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from google.oauth2 import service_account
+import json
+from shop.tests import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +27,7 @@ SECRET_KEY = '1nfb@@9-677-^)u$42t)khtwlfh4=+=%-qk_1ahopo_@724i8w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -120,3 +123,26 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+STATIC_ROOT = 'static'
+
+if not DEBUG:
+    pass
+
+    # DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    # GS_BUCKET_NAME = 'babaco-e61f8.appspot.com'
+    # STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    #
+    # # MEDIA_ROOT = 'babaco-e61f8.appspot.com/'
+    # MEDIA_URL = 'https://storage.googleapis.com/{}/'.format(GS_BUCKET_NAME)
+    #
+    # # with open('firebaseCred.json') as f:
+    # #     cred = json.load(f)
+    # # cred['private_key'] = os.environ.get('firebase_private_key')
+    # # GS_CREDENTIALS = service_account.Credentials.from_service_account_info(cred)
+    #
+    # GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    #     r'C:\Users\Uvais\Desktop\firebaseCred.json'
+    # )
+    #
+    # # cred = credentials.Certificate(r"C:\Users\Uvais\Desktop\firebaseCred.json")
+    # # firebase_admin.initialize_app(cred)
