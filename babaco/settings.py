@@ -76,13 +76,20 @@ WSGI_APPLICATION = 'babaco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'babaco',
+#         'USER': 'babaco_app',
+#         'PASSWORD': 'avocado',
+#         'HOST': 'localhost'
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'babaco',
-        'USER': 'babaco_app',
-        'PASSWORD': 'avocado',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
