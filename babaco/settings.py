@@ -75,22 +75,22 @@ WSGI_APPLICATION = 'babaco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'babaco',
-#         'USER': 'babaco_app',
-#         'PASSWORD': 'avocado',
-#         'HOST': 'localhost'
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'babaco',
+        'USER': 'babaco_app',
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': 'localhost'
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mydatabase',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -130,26 +130,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 if not DEBUG:
     pass
-
-    # DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-    # GS_BUCKET_NAME = 'babaco-e61f8.appspot.com'
-    # STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-    #
-    # # MEDIA_ROOT = 'babaco-e61f8.appspot.com/'
-    # MEDIA_URL = 'https://storage.googleapis.com/{}/'.format(GS_BUCKET_NAME)
-    #
-    # # with open('firebaseCred.json') as f:
-    # #     cred = json.load(f)
-    # # cred['private_key'] = os.environ.get('firebase_private_key')
-    # # GS_CREDENTIALS = service_account.Credentials.from_service_account_info(cred)
-    #
-    # GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-    #     r'C:\Users\Uvais\Desktop\firebaseCred.json'
-    # )
-    #
-    # # cred = credentials.Certificate(r"C:\Users\Uvais\Desktop\firebaseCred.json")
-    # # firebase_admin.initialize_app(cred)
 
 django_heroku.settings(locals())
