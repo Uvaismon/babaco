@@ -1,1 +1,1 @@
-web: gunicorn babaco.py
+web: gunicorn babaco.wsgi
