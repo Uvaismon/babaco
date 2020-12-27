@@ -26,7 +26,7 @@ SECRET_KEY = '1nfb@@9-677-^)u$42t)khtwlfh4=+=%-qk_1ahopo_@724i8w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'babaco.herokuapp.com']
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
