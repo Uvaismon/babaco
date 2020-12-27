@@ -1,0 +1,78 @@
+.main-win {
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+}
+
+.prod-cat {
+    font-size: small;
+    width: 280px;
+    text-align: right;    
+}
+
+.prod-card {
+    background-color: black;
+    width: 300px;
+    padding-bottom: 20px;
+}
+
+.prod-btn {
+    position: relative;
+    color: white;
+    background-color: black;
+}
+
+.prod-btn:hover {
+    background-color: blue;
+    transform: translate(0px, -3px);
+}
+
+.prod-ext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 280px;
+}
+
+.prod-price {
+    text-align: right;
+}
+
+#search {
+    width: 350px;
+    background-color: black;
+    color: white;
+    border: red;
+    border-style: solid;
+    border-radius: 30px;
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+#go {
+    position: absolute;
+    background: none;
+    color: red;
+    border: none;
+    transform: translate(-35px, 1px);
+}
+
+#go:focus {
+    outline: none;
+}
+
+.message {
+    padding: 10px;
+    color: red;
+}
+
+hr {
+    background-color: #818181;
+    height: 1.5px;
+    margin: 0 12px 0 12px;
+}

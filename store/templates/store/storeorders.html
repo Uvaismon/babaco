@@ -1,0 +1,62 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/register.css'  %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'store/order.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'user/product_details.css' %}">
+{% endblock styleLinks %}
+{%block bodyContent%}
+    {% if order_details == 'zero' %}
+        <h1>No orders received!</h1>
+    {% else %}
+        {% for order in order_details  %}
+            <article class="media content-section">
+                <div class="media-body">
+                    <div class="article-metadata">
+                            <p class="article-content">{{ order.date }}</p>
+                    </div>
+                    <h2 class="article-title">{{ order.prod_id.name }}</h2>
+                    <p class="article-content">Product Id : {{ order.prod_id.pk }}</p>
+                    <p class="article-content">Quantity : {{ order.quantity }}</p>
+                    <p class="article-content ">Total Price : {% widthratio order.prod_id.price 1 order.quantity %} </p>
+                    <div><h4>Buyer's details:</h4>
+                        <p class="article-content">Name : {{ order.cust_id.name }}</p>
+                        <p class="article-content">Mail : {{ order.cust_id.email }}</p>
+                        <p >Address : {{ order.address }}</p>
+                    </div>
+
+                    {% if not order.delivered %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="prod-btn" style="float: right;" 
+                                value="{{ order.order_id }}" name="order_id">Delivered</button>
+                        </form>
+                    {% else %}
+                        <span style="float: right; color: lime;">Product delivered</span>
+                    {% endif %}
+
+                </div>
+            </article>
+        {% endfor %}
+
+        <div class="pagination ">
+            {% if order_details.has_previous %}
+                <a class="pagination-action"  href="?page=1"><i class="fas fa-angle-double-left"></i> </a>
+                <a  class="pagination-action" href="?page={{ order_details.previous_page_number }}"><i class="fas fa-angle-left"></i></a>
+            {% endif %}
+
+            {% for num in order_details.paginator.page_range %}
+                {% if order_details.number == num %}
+                    <span class="pagination-number pagination-current"> {{ num }} </span>
+                {% elif num > order_details.number|add:'-3' and num < order_details.number|add:'3' %}
+                    <a class="pagination-number" href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if order_details.has_next %}
+            <a class="pagination-action" href="?page={{ order_details.next_page_number }}" > <i class="fas fa-angle-right"></i> </a>
+                <a class="pagination-action" href="?page={{ order_details.paginator.num_pages }}" > <i class="fas fa-angle-double-right"></i> </a>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock bodyContent %}

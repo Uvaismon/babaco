@@ -1,0 +1,55 @@
+.prod-ext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 280px;
+}
+.prod-cat {
+    font-size: small;
+    width: 280px;
+    text-align: left;
+}
+
+.sub-detail {
+    font-size: large;
+}
+
+.prod-img {
+    float : right;
+    width: 35%;
+    height: 35%;
+}
+
+.prod-btn {
+    color: white;
+    background-color: black;
+}
+
+.prod-btn:hover {
+    background-color: blue;
+    transform: translate(0px, -3px);
+}
+
+.review {
+    padding-top: 50px;
+    width: 45%;
+    word-wrap: break-word;
+}
+
+.rev-box {
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.delete-rev-btn {
+    text-align: right;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}

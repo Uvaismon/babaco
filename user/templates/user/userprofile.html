@@ -1,0 +1,35 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/register.css' %}">
+{% endblock styleLinks %}
+
+{% block bodyContent %}
+
+    <main>
+        <div class="card form-card">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <div class="profile-info">
+                    <div class="user-info">
+                        <header>
+                            <h3>Profile info</h3>
+                        </header>
+                        <div class="label-data">
+                            <div class="label mb-2 mt-3">Name : {{ customer_id.name }}</div>
+                        </div>
+                        <div class="label-data">
+                           <div class="label mb-2">Email : {{ customer_id.email }}</div>
+                        </div>
+                        <br>
+                        <a href="logout/"><button class="lgout-btn">Logout</button></a>
+                        <form method="POST">
+                            {% csrf_token %}
+                                <button class="lgout-btn mt-2 " type="submit" name="cust_id" value="{{ customer.cust_id }}">Delete my acount</button>
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </main>
+{% endblock bodyContent %}

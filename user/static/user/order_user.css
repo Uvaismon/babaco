@@ -1,0 +1,21 @@
+.main-win {
+    font-size: large;
+}
+
+#id_address {
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 4px;
+    resize: none;
+    height: 150px;
+    color: white;
+}
+
+#id_quantity {
+    background-color: black;
+    color: white;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-3px);
+}

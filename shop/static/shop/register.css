@@ -1,0 +1,46 @@
+.form-card {
+    background-color: black;
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    font-size: large;
+    border-style: solid;
+    border-color: white;
+    padding: 2%;
+    border-radius: 6%;
+    border-width: 3px;
+}
+
+.sgnbtn {
+    transform: translateX(70%);
+}
+
+.ahc {
+    padding-top: 10px;
+}
+
+.lgout-btn {
+    color: white;
+    background-color: black;
+}
+
+.lgout-btn:hover {
+    background-color: blue;
+}
+
+.auth {
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#id_location {
+    height: 50px;
+    width: 255px;
+}

@@ -1,0 +1,61 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/register.css'  %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'store/add_product.css'  %}">
+{% endblock styleLinks %}
+
+{% block bodyContent %}
+    <div class="prod-form-card">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4" style="font-size: x-large; font-weight: bold;"> {{mode}} Product Info</legend>
+                {% if messages %}
+                    {% for message in messages %}
+                    <span class="alert-danger"> {{ message }} </span><br>
+                    {% endfor %}
+                {% endif %}
+                <div>
+
+                    <div class="elm elm-1">
+                        <br> {{ form.name.label_tag }} {% if form.name.field.required %} * {% endif %} <br>
+                        <span class="ml-2"> {{ form.name }}</span><br>
+                    </div>
+
+                    <div class="elm elm-2">
+                        <br> {{ form.details.label_tag }} {% if form.details.field.required %} * {% endif %} <br>
+                        <span class="ml-2"> {{ form.details }}</span><br>
+                    </div>
+
+                    <div class="elm elm-3" style="float: left;">
+                        <br> {{ form.price.label_tag }} {% if form.price.field.required %} * {% endif %} <br>
+                        <span class="ml-2"> {{ form.price }}</span><br>
+                    </div>
+
+                    <div class="elm elm-4">
+                        <br> {{ form.category.label_tag }} {% if form.category.field.required %} * {% endif %} <br>
+                        <span class="ml-2"> {{ form.category }}</span><br>
+                    </div>
+
+                    <div class="elm elm-5">
+                        <br> {{ form.image.label_tag }} {% if form.image.field.required %} * {% endif %} <br>
+                        <span class="ml-2"> {{ form.image }}</span><br>
+                    </div>
+
+                    <div class="elm elm-6">
+                        <br> {{ form.deliverable.label_tag }} {% if form.deliverable.field.required %} * {% endif %}
+                        <span class="ml-2"> {{ form.deliverable }}</span><br>
+                    </div>
+
+                </div>
+            </fieldset>
+            {% block btns %}
+                <div class="form-group sgnbtn">
+                    <button class="btn btn-outline-info" type="submit">{{mode}} Product</button>
+                </div>
+            {% endblock btns %}
+        </form>
+    </div>
+
+{% endblock bodyContent %}

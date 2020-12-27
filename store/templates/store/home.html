@@ -1,0 +1,34 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block styleLinks %}
+    <link rel="stylesheet" type="text/css" href="{%static 'user/home_user.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'store/home_store.css' %}">
+{% endblock styleLinks %}
+
+{% block side_nav %}
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{% url 'addproduct.store' %}">Add products</a>
+        <a href="{% url 'orders.store' %}">Orders</a>
+        {% if store_name %}
+            <a href="{% url 'logout' %}" class="mt-4 nav-logout">Logout</a>
+        {% endif %}
+    </div> 
+    <button class="sidenav-btn navbar-brand" onclick="openNav()">☰</button>
+{% endblock side_nav %}
+
+{%block bodyContent%}
+    <div class="main-win">
+        {% for product in products %}
+        <div class="prod-card">
+            <img src="{{ media_url }}{{ product.image }}" alt="Card image cap" height="280px", width="280px">
+            <div class="prod-cat"> {{product.category.name}} </div>
+            <h5> {{ product.name }} </h5>
+            <div class="prod-ext">
+                <div><a href="{% url 'edit_product' product.prod_id %}"><button class="prod-btn">Edit</button></a></div>
+                <div class="prod-price">₹ {{ product.price }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock bodyContent %}
