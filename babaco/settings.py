@@ -137,7 +137,7 @@ if not DEBUG:
         'type': 'service_account',
         'project_id': 'babaco-e61f8',
         'private_key_id': os.environ.get('firebase_private_key_id'),
-        'private_key': os.environ.get('firebase_private_key'),
+        'private_key': os.environ.get('firebase_private_key').replace('\\n', '\n'),
         'client_email': 'firebase-adminsdk-3sk3q@babaco-e61f8.iam.gserviceaccount.com',
         'client_id': '102367086375451386626',
         'auth_uri': 'https://accounts.google.com/o/oauth2/auth',
