@@ -3,4 +3,3 @@
 *.log
 media/
 staticfiles/
-firebaseCred.json
