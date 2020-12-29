@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1nfb@@9-677-^)u$42t)khtwlfh4=+=%-qk_1ahopo_@724i8w'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -132,25 +132,11 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-firebaseCred = {
-    'type': 'service_account',
-    'project_id': 'babaco-e61f8',
-    'private_key_id': os.environ.get('firebase_private_key_id'),
-    'private_key': os.environ.get('firebase_private_key').replace('\\n', '\n'),
-    'client_email': 'firebase-adminsdk-3sk3q@babaco-e61f8.iam.gserviceaccount.com',
-    'client_id': '102367086375451386626',
-    'auth_uri': 'https://accounts.google.com/o/oauth2/auth',
-    'token_uri': 'https://oauth2.googleapis.com/token',
-    'auth_provider_x509_cert_url': 'https://www.googleapis.com/oauth2/v1/certs',
-    'client_x509_cert_url': 'https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-3sk3q%40babaco-e61f8.iam.gserviceaccount.com'
-}
-
 # Firebase Storage Settings
 if not DEBUG:
     DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
     GS_BUCKET_NAME = 'babaco-e61f8.appspot.com'
     GS_FILE_OVERWRITE = False
-    # GS_CREDENTIALS = service_account.Credentials.from_service_account_info(firebaseCred)
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
         os.path.join(BASE_DIR, 'firebaseCred.json')
     )
