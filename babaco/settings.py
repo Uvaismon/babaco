@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from google.oauth2 import service_account
 import django_heroku
+import pyrebase
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'babaco.herokuapp.com']
 
@@ -133,11 +134,24 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Firebase Storage Settings
-if not DEBUG:
+if DEBUG:
     DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
     GS_BUCKET_NAME = 'babaco-e61f8.appspot.com'
     GS_FILE_OVERWRITE = False
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
         os.path.join(BASE_DIR, 'firebaseCred.json')
     )
+    config = {
+        "apiKey": "AIzaSyC6MVkHn1bnClsFc9jqV8RQch_IwdA10l0",
+        "authDomain": "babaco-e61f8.firebaseapp.com",
+        "projectId": "babaco-e61f8",
+        "storageBucket": "babaco-e61f8.appspot.com",
+        "serviceAccount": os.path.join(BASE_DIR, 'firebaseCred.json'),
+        "databaseURL": None,
+        "messagingSenderId": "656832018598",
+        "appId": "1:656832018598:web:f61765a2cc523cbab49c67",
+        "measurementId": "G-QHBPG4G1NF"
+        }
+    firebase_storage = pyrebase.initialize_app(config).storage()
+
 django_heroku.settings(locals())
