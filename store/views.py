@@ -113,7 +113,9 @@ def edit_product(req, prod_id):
             post['store_id'] = req.session.get('store_id')
             form = AddproductForm(post, instance=prod)
             if form.is_valid():
-                form.save()
+                mod = form.save()
+                mod.imageUrl = firebase_storage.child(str(mod.image)).get_url(None)
+                mod.save()
                 return redirect(home)
         elif req.POST.get('mode') == 'delete':
             prod.delete()
