@@ -29,6 +29,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='product_pics/')
     deliverable = models.BooleanField(default=False)
+    imageUrl = models.CharField(max_length=512, null=True, blank=True)
 
 
 class Review(models.Model):
@@ -48,7 +49,7 @@ class Order(models.Model):
     date = models.DateField(null=False)
     delivered = models.BooleanField(null=False, default=False)
     address = models.TextField(null=False)
-    quantity = models.IntegerField(default=1, max_length=10)
+    quantity = models.IntegerField(default=1)
 
 
 class Category(models.Model):

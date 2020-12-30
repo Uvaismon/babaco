@@ -18,7 +18,7 @@ def home(req):
     if len(products) == 0:
         message = "No result found!"
     context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
-               'products': products, 'media_url': settings.MEDIA_URL, 'categories': Category.objects.all()}
+               'products': products, 'categories': Category.objects.all()}
     return render(req, 'user/home.html', context)
 
 
@@ -60,9 +60,8 @@ def product_detail(req, prod_id):
     reviews = Review.objects.filter(prod_id=product_name)
     if len(reviews) == 0:
         reviews = None
-    context = {'prod_name': product_name, 'media_url': settings.MEDIA_URL, 'title': product_name.name,
-               'store_id': store_id, 'user': 'user', 'user_name': req.session.get('user_name'), 'reviews': reviews,
-               'user_id': req.session.get('user_id')}
+    context = {'prod_name': product_name, 'title': product_name.name, 'store_id': store_id, 'user': 'user',
+               'user_name': req.session.get('user_name'), 'reviews': reviews, 'user_id': req.session.get('user_id')}
     return render(req, 'user/product_details.html', context)
 
 
@@ -126,8 +125,8 @@ def filtered_view(req, cat_id=-1):
     if len(products) == 0:
         message = "No result found!"
     context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
-               'products': products, 'media_url': settings.MEDIA_URL, 'categories': Category.objects.all(),
-               'search_bar': None}
+               'products': products,
+               'categories': Category.objects.all(), 'search_bar': None}
     return render(req, 'user/home.html', context)
 
 

@@ -2,10 +2,10 @@ from django.core.paginator import Paginator
 from django.http import HttpResponseForbidden
 from django.shortcuts import render, redirect
 from shop.tests import logging
-from babaco.settings import MEDIA_URL
 from shop.models import Store, Product, Order
 from shop.views import login_view, registration_view
 from .forms import StoreRegistrationForm, AddproductForm
+from babaco.settings import firebase_storage
 
 
 def home(req):
@@ -14,7 +14,7 @@ def home(req):
     store = Store.objects.get(pk=req.session.get('store_id'))  # db trans
     products = Product.objects.filter(store_id=store)  # db trans
     context = {'title': 'home', 'user': 'store', 'store_name': req.session.get('store_name'),
-               'products': products, 'media_url': MEDIA_URL}
+               'products': products}
     return render(req, 'store/home.html', context)
 
 
@@ -38,7 +38,9 @@ def store_addproduct_view(req):
         post['store_id'] = Store.objects.get(pk=store_id)  # dbtrans
         form = AddproductForm(post, req.FILES)
         if form.is_valid():
-            form.save()
+            mod = form.save()
+            mod.imageUrl = firebase_storage.child(str(mod.image)).get_url(None)
+            mod.save()
             return redirect(home)
     else:
         form = AddproductForm()
