@@ -109,7 +109,7 @@ def edit_product(req, prod_id):
         if req.POST.get('mode') == 'edit':
             post = req.POST.copy()
             post['store_id'] = req.session.get('store_id')
-            form = AddproductForm(post, instance=prod)
+            form = AddproductForm(post, req.FILES, instance=prod)
             if form.is_valid():
                 form.save()
                 return redirect(home)
