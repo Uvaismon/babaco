@@ -111,7 +111,7 @@ def edit_product(req, prod_id):
         if req.POST.get('mode') == 'edit':
             post = req.POST.copy()
             post['store_id'] = req.session.get('store_id')
-            form = AddproductForm(post, instance=prod)
+            form = AddproductForm(post, req.FILES, instance=prod)
             if form.is_valid():
                 mod = form.save()
                 mod.imageUrl = firebase_storage.child(str(mod.image)).get_url(None)
