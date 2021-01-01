@@ -2,15 +2,6 @@
     font-size: large;
 }
 
-#id_address {
-    background-color: #121212;
-    border: 2px solid red;
-    border-radius: 4px;
-    resize: none;
-    height: 150px;
-    color: white;
-}
-
 #id_quantity {
     background-color: #121212;
     color: white;
@@ -18,4 +9,28 @@
 
 .confirm-btn:hover {
     transform: translateY(-3px);
+}
+
+@media(min-width: 800px) {
+    #id_address {
+        background-color: #121212;
+        border: 2px solid cyan;
+        border-radius: 4px;
+        resize: none;
+        height: 15vh;
+        color: white;
+        width: 35vw;
+    }
+}
+
+@media(max-width: 800px) {
+    #id_address {
+        background-color: #121212;
+        border: 2px solid cyan;
+        border-radius: 4px;
+        resize: none;
+        height: 15vh;
+        color: white;
+        width: 65vw;
+    }
 }

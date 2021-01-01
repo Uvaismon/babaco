@@ -21,18 +21,12 @@
 
 .prod-btn {
     color: white;
-    background-color: #121212;
+    background-color: black;
 }
 
 .prod-btn:hover {
     background-color: blue;
     transform: translate(0px, -3px);
-}
-
-.review {
-    padding-top: 50px;
-    width: 45%;
-    word-wrap: break-word;
 }
 
 .rev-box {
@@ -52,4 +46,20 @@
     text-align: right;
     padding-right: 5px;
     padding-bottom: 5px;
+}
+
+@media(min-width: 800px) {
+    .review {
+        padding-top: 50px;
+        width: 45%;
+        word-wrap: break-word;
+    }
+}
+
+@media(max-width: 800px) {
+    .review {
+        padding-top: 50px;
+        width: 70%;
+        word-wrap: break-word;
+    }
 }

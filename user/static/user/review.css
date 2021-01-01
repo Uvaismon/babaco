@@ -3,19 +3,36 @@
     font-size: large;
 }
 
-#id_remarks {
-    background-color: #121212;
-    border-color: red;
-    height: 200px;
-    width: 500px;
-    resize: none;
-    border-radius: 30px;
-    padding-left: 10px;
-    outline: none;
-    color: white;
-    padding-top: 10px;
-}
-
 .rev-btn:hover {
     transform: translateY(-3px);
+}
+
+@media(min-width: 800px) {
+    #id_remarks {
+        background-color: #121212;
+        border-color: cyan;
+        height: 15vh;
+        width: 35vw;
+        resize: none;
+        border-radius: 30px;
+        padding-left: 10px;
+        outline: none;
+        color: white;
+        padding-top: 10px;
+    }    
+}
+
+@media(max-width: 800px) {
+    #id_remarks {
+        background-color: #121212;
+        border-color: cyan;
+        height: 15vh;
+        width: 65vw;
+        resize: none;
+        border-radius: 30px;
+        padding-left: 10px;
+        outline: none;
+        color: white;
+        padding-top: 10px;
+    }    
 }
