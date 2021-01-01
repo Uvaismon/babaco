@@ -18,7 +18,7 @@ def home(req):
     if len(products) == 0:
         message = "No result found!"
     context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
-               'products': products, 'categories': Category.objects.all()}
+               'products': products, 'categories': Category.objects.all(), 'home': True}
     return render(req, 'user/home.html', context)
 
 
