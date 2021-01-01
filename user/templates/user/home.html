@@ -54,6 +54,9 @@
             </div>
         </div>
         {% endfor %}
+        <div class="prod-card view-all">
+            <a href="{% url 'filtered_view_all' %}"><button class="view-all-btn btn btn-outline-info"> View all</button></a>
+        </div>
     </div>
 
 {% endblock bodyContent %}
