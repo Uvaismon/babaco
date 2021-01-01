@@ -121,7 +121,6 @@ body {
     text-decoration: none;
 }
 
-
 @media(max-width: 800px) {
     .line-breaker {
         width: 100%;

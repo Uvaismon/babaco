@@ -28,7 +28,7 @@
             {% endif %}
             
         </div>
-        <span class="line-breaker"></span>
+        {% if home %} <span class="line-breaker"></span> {% endif %}
         {% block bar-nav %} {% endblock bar-nav %}
         <div class="auth">
             {% if user == 'user' %}
