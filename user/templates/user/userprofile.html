@@ -22,10 +22,10 @@
                            <div class="label mb-2">Email : {{ customer_id.email }}</div>
                         </div>
                         <br>
-                        <a href="logout/"><button class="lgout-btn">Logout</button></a>
+                        <a href="logout/"><button class="btn btn-outline-info">Logout</button></a>
                         <form method="POST">
                             {% csrf_token %}
-                                <button class="lgout-btn mt-2 " type="submit" name="cust_id" value="{{ customer.cust_id }}">Delete my acount</button>
+                                <button class="btn btn-outline-info mt-2" type="submit" name="cust_id" value="{{ customer.cust_id }}">Delete my acount</button>
                         </form>
                     </div>
                 </div>

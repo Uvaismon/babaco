@@ -25,7 +25,7 @@
         <br> <br>
         {%if prod_name.deliverable %}
             <div class="order-btn ml-2">
-                <a href="{% url 'order' prod_name.prod_id%}"><button class="prod-btn">Order now</button></a>
+                <a href="{% url 'order' prod_name.prod_id%}"><button class="btn btn-outline-info">Order now</button></a>
             </div>
         {% else %}
             <p class="ml-2">This product is not available for online ordering.<br>Please visit store to buy it.</p>
@@ -67,7 +67,7 @@
     </div>
 
     <div class="add-rev ml-2">
-        <a href="{% url 'review' prod_name.prod_id %}"> <button class="prod-btn">Add Review</button> </a>
+        <a href="{% url 'review' prod_name.prod_id %}"> <button class="btn btn-outline-info">Add Review</button> </a>
     </div>
 
 {% endblock bodyContent %}

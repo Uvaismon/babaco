@@ -78,7 +78,7 @@ def orders_view(req):
         for product in products:
             order_id = product.order_id
             prod_id = product.prod_id
-            if prod_id.store_id == store_id:
+            if prod_id and prod_id.store_id == store_id:
                 order_details = Order.objects.get(order_id=order_id)  # dbtrans
                 storeorder_id.append(order_details)
         try:
