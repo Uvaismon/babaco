@@ -32,15 +32,15 @@
         <div class="auth">
             {% if user == 'user' %}
                 {% if user_name %}
-                    <a href="{% url 'profile' %}"> <button class="btn btn-outline-info">{{ user_name }}</button></a>
+                    <a href="{% url 'profile' %}" class="auth-link"> <button class="btn btn-outline-info btn-auth auth-eff">{{ user_name }}</button></a>
                 {% else %}
-                    <a href="{% url 'login' %}"><button class="btn btn-outline-info">Log in </button></a>
+                    <a href="{% url 'login' %}" class="auth-link"><button class="btn btn-outline-info btn-auth auth-eff">Log in </button></a>
                 {% endif %}
             {% else %}
                 {% if store_name %}
-                <a href="{% url 'profile.store' %}"> <button class="btn btn-outline-info">{{ store_name }}</button></a>
+                <a href="{% url 'profile.store' %}" class="auth-link"> <button class="btn btn-outline-info btn-auth auth-eff">{{ store_name }}</button></a>
                 {% else %}
-                    <a href="{% url 'login.store' %}"><button class="btn btn-outline-info">Log in</button> </a>
+                    <a href="{% url 'login.store' %}" class="auth-link"><button class="btn btn-outline-info btn-auth auth-eff">Log in</button> </a>
                 {% endif %}
             {% endif %} 
         </div>
