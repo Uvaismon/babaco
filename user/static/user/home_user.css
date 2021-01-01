@@ -40,7 +40,6 @@
 }
 
 #search {
-    width: 30vw;
     background-color: #121212;
     color: white;
     border: cyan;
@@ -91,4 +90,16 @@ hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media(max-width: 800px) {
+    .search-bar {
+        width: 40vw;
+    }
+} 
+
+@media(min-width: 800px) {
+    .search-bar {
+        width: 30vw;
+    }
 }

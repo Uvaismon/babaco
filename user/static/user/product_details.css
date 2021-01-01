@@ -48,18 +48,19 @@
     padding-bottom: 5px;
 }
 
+.review {
+    padding-top: 50%;
+    word-wrap: break-word;
+}
+
 @media(min-width: 800px) {
-    .review {
-        padding-top: 50px;
+    .review-media {
         width: 45%;
-        word-wrap: break-word;
     }
 }
 
 @media(max-width: 800px) {
     .review {
-        padding-top: 50px;
         width: 70%;
-        word-wrap: break-word;
     }
 }
