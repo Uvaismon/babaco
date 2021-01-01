@@ -11,26 +11,24 @@
     transform: translateY(-3px);
 }
 
-@media(min-width: 800px) {
-    #id_address {
-        background-color: #121212;
-        border: 2px solid cyan;
-        border-radius: 4px;
-        resize: none;
-        height: 15vh;
-        color: white;
-        width: 35vw;
-    }
+#id_address {
+    background-color: #121212;
+    border: 2px solid cyan;
+    border-radius: 4px;
+    resize: none;
+    height: 15vh;
+    color: white;
+    width: 65vw;
 }
 
 @media(max-width: 800px) {
     #id_address {
-        background-color: #121212;
-        border: 2px solid cyan;
-        border-radius: 4px;
-        resize: none;
-        height: 15vh;
-        color: white;
         width: 65vw;
+    }
+}
+
+@media(min-width: 800px) {
+    #id_address {
+        width: 35vw;
     }
 }
