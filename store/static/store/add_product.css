@@ -13,7 +13,7 @@ label[for=id_store_id] {
 
 @media (max-width: 500px) {
     .prod-form-card {
-        background-color: black;
+        background-color: #121212;
         position: absolute;
         width: fit-content;
         top: 50%;
@@ -30,7 +30,7 @@ label[for=id_store_id] {
 
 @media (min-width: 500px) {
     .prod-form-card {
-        background-color: black;
+        background-color: #121212;
         position: absolute;
         width: fit-content;
         top: 50%;

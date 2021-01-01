@@ -13,7 +13,7 @@
 }
 
 .prod-card {
-    background-color: black;
+    background-color: #121212;
     width: 300px;
     padding-bottom: 20px;
 }
@@ -21,7 +21,7 @@
 .prod-btn {
     position: relative;
     color: white;
-    background-color: black;
+    background-color: #121212;
 }
 
 .prod-btn:hover {
@@ -41,7 +41,7 @@
 
 #search {
     width: 350px;
-    background-color: black;
+    background-color: #121212;
     color: white;
     border: red;
     border-style: solid;
@@ -75,4 +75,9 @@ hr {
     background-color: #818181;
     height: 1.5px;
     margin: 0 12px 0 12px;
+}
+
+.view-all-btn {
+    height: 280px;
+    width: 280px;
 }

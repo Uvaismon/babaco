@@ -1,5 +1,5 @@
 .form-card {
-    background-color: black;
+    background-color: #121212;
     position: absolute;
     width: fit-content;
     top: 50%;
@@ -23,7 +23,7 @@
 
 .lgout-btn {
     color: white;
-    background-color: black;
+    background-color: #121212;
 }
 
 .lgout-btn:hover {

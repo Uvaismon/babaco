@@ -3,7 +3,7 @@
 }
 
 #id_address {
-    background-color: black;
+    background-color: #121212;
     border: 2px solid red;
     border-radius: 4px;
     resize: none;
@@ -12,7 +12,7 @@
 }
 
 #id_quantity {
-    background-color: black;
+    background-color: #121212;
     color: white;
 }
 
