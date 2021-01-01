@@ -17,7 +17,7 @@
 <body>
 
     <div class="navbar">
-        <div>
+        <div class="babaco-logo">
 
             {% block side_nav %} {% endblock side_nav %}
 
@@ -28,6 +28,7 @@
             {% endif %}
             
         </div>
+        <span class="line-breaker"></span>
         {% block bar-nav %} {% endblock bar-nav %}
         <div class="auth">
             {% if user == 'user' %}
