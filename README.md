@@ -1,3 +1,4 @@
 # babaco
-DBMS mini project
+DBMS mini project.
+
 [Go to site](http://babaco.herokuapp.com)
