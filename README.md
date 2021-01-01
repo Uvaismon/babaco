@@ -1,3 +1,3 @@
 # babaco
 DBMS mini project
-[Go to site](babaco.herokuapp.com)
+[Go to site](http://babaco.herokuapp.com)
