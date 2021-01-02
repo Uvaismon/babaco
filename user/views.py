@@ -16,7 +16,8 @@ def home(req):
         products = Product.objects.filter(name__icontains=req.POST['search']) or \
                    Product.objects.filter(details__icontains=req.POST['search'])  # dbtrans
     else:
-        products = Product.objects.all()[:8]  # dbtrans
+        products = Product.objects.all()[::-1]  # dbtrans
+        products = products[:8]
     if len(products) == 0:
         message = "No result found!"
     context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
