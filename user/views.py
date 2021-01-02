@@ -10,7 +10,9 @@ from django.http import HttpResponseForbidden
 
 def home(req):
     message = None
+    home = True
     if req.method == 'POST':
+        home = False
         products = Product.objects.filter(name__icontains=req.POST['search']) or \
                    Product.objects.filter(details__icontains=req.POST['search'])  # dbtrans
     else:
@@ -18,7 +20,7 @@ def home(req):
     if len(products) == 0:
         message = "No result found!"
     context = {'title': 'home', 'user': 'user', 'user_name': req.session.get('user_name'), 'message': message,
-               'products': products, 'categories': Category.objects.all(), 'home': True}
+               'products': products, 'categories': Category.objects.all(), 'home': home}
     return render(req, 'user/home.html', context)
 
 
