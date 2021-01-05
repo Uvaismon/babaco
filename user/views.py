@@ -47,7 +47,7 @@ def userprofile(req):
         context = {'customer_id': customer_id, 'title': 'profile', 'user': 'user'}
         return render(req, 'user/userprofile.html', context)
     else:
-        return redirect('login/')
+        return redirect(customer_login_view)
 
 
 def product_detail(req, prod_id):
