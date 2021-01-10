@@ -3,8 +3,9 @@
     display: grid;
     margin-left: 5%;
     margin-right: 5%;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 280px);
     place-content: center;
+    column-gap: 20px;
 }
 
 .prod-cat {
