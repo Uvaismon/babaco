@@ -96,6 +96,9 @@ hr {
     .search-bar {
         width: 40vw;
     }
+    .main-win {
+        place-content: center;
+    }
 } 
 
 @media(min-width: 800px) {
@@ -103,9 +106,3 @@ hr {
         width: 30vw;
     }
 }
-
-@media(max-width: 600px) {
-    .main-win {
-        place-content: center;
-    }
-} 
