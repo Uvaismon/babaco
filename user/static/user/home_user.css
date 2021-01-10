@@ -103,3 +103,9 @@ hr {
         width: 30vw;
     }
 }
+
+@media(max-width: 600px) {
+    .main-win {
+        place-content: center;
+    }
+} 
