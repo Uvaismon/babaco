@@ -1,7 +1,5 @@
 .main-win {
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
 }
@@ -96,6 +94,7 @@ hr {
     .search-bar {
         width: 40vw;
     }
+    
     .main-win {
         place-content: center;
     }
@@ -104,5 +103,10 @@ hr {
 @media(min-width: 800px) {
     .search-bar {
         width: 30vw;
+    }
+
+    .main-win {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
