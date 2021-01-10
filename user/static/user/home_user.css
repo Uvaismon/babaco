@@ -1,6 +1,8 @@
 .main-win {
     position: relative;
     display: grid;
+    margin-left: 5%;
+    margin-right: 5%;
     grid-template-columns: repeat(auto-fit, 300px);
     place-content: center;
 }
