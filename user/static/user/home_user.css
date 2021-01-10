@@ -2,6 +2,7 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
+    place-content: center;
 }
 
 .prod-cat {
@@ -94,19 +95,10 @@ hr {
     .search-bar {
         width: 40vw;
     }
-    
-    .main-win {
-        place-content: center;
-    }
 } 
 
 @media(min-width: 800px) {
     .search-bar {
         width: 30vw;
-    }
-
-    .main-win {
-        margin-left: 5%;
-        margin-right: 5%;
     }
 }
