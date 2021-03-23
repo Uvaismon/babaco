@@ -136,22 +136,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Firebase Storage Settings
 if DEBUG:
     DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-    GS_BUCKET_NAME = 'babaco-e61f8.appspot.com'
+    GS_BUCKET_NAME = os.environ.get('GS_BUCKET_NAME')
     GS_FILE_OVERWRITE = False
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
         os.path.join(BASE_DIR, 'firebaseCred.json')
     )
-    config = {
-        "apiKey": "AIzaSyC6MVkHn1bnClsFc9jqV8RQch_IwdA10l0",
-        "authDomain": "babaco-e61f8.firebaseapp.com",
-        "projectId": "babaco-e61f8",
-        "storageBucket": "babaco-e61f8.appspot.com",
-        "serviceAccount": os.path.join(BASE_DIR, 'firebaseCred.json'),
-        "databaseURL": None,
-        "messagingSenderId": "656832018598",
-        "appId": "1:656832018598:web:f61765a2cc523cbab49c67",
-        "measurementId": "G-QHBPG4G1NF"
-        }
+    config = """
+                Insert Firebase configuration details here!
+             """
     firebase_storage = pyrebase.initialize_app(config).storage()
 
 django_heroku.settings(locals())
